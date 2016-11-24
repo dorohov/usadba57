@@ -1,0 +1,96 @@
+.footer-site{
+	position: relative;
+	z-index: 4;
+	color: @b-footer-color;
+	font-size: @b-footer-fs; //12
+	line-height: @b-footer-lh; //18
+	font-family: @b-footer-ff;
+	//background-color: @b-footer-bg;	
+	//background-image: url("@{url-path-img}/bg/bg-footer.png");
+	//background-repeat: repeat;
+	//background-position: center;
+	//opacity: @opacity;
+	a{
+		&, &:hover, &:focus{color: @b-footer-color;} 
+	}
+	@media @media-size-xs{
+		text-align: center;
+	}
+	@media @media-screen{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		left: 0;
+	}
+	&.location{
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
+		@media @media-size-xs{display: none;}
+		@media @media-size-sm{
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			left: 0;			
+		}
+	}
+	.container{
+		padding-top: 45px;
+		padding-bottom: 35px;
+		@media @media-size-xs{
+			padding-top: 35px;
+			padding-bottom: 15px;
+		}
+		@media @media-size-mdl{
+			padding-top: 35px;
+			padding-bottom: 25px;
+		}
+	}
+}
+._fs__row{
+	align-items: center;
+	justify-content: space-between;	
+	@media @media-size-sm{flex-wrap: wrap;}
+	> .cols{		
+		@media @media-size-xs{width: 100%; margin-bottom: 20px;}
+	}
+}
+._fs__phone-cols{
+	@media @media-size-sm{width: 33.3333%;}
+}
+._fs__contacts-cols{
+	font-size: @b-fs + 4px; //20px;
+	@media @media-size-sm-p{width: 66.6666%;}
+	@media @media-size-sml{
+		font-size: @b-fs + 2px; //18px;
+	}
+	@media @media-size-xxl{width: 40%;}
+}
+._fs__dorohovdesign-cols{
+	@media @media-size-sm{width: 100%; margin-top: 25px;}
+
+}
+
+
+._fs__phone{
+	font-family: @proxima-bold;
+	font-size: @b-fs + 14px; //30px;
+	line-height: @b-lh + 6px; //30px
+	@media @media-size-sml{
+		font-size: @b-fs + 10px; //26px;
+		line-height: @b-lh + 2px; //26px
+	}
+}
+._fs__contacts-row{
+	justify-content: space-between;
+	> .cols{
+		@media @media-size-xs{width: 100%; margin-bottom: 5px}
+	}
+}
+._fs__dorohovdesign-row{
+	align-items: center;
+	@media @media-device{justify-content: center;}
+	> .cols{padding: 0 5px;}
+}
+._fs__dorohovdesign__logo{
+	a{border: none}
+	@media @media-size-xs{margin: 0 auto}
+}

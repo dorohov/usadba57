@@ -1,0 +1,24 @@
+{
+	"contacts":{
+		"email":"a.oleynik@fedeco.ru",
+		"phone":"+7(4862)90-07-50",
+		"phone_tel":"+74862900750",
+		"address":"г.Орёл, бульвар Победы д.6, оф.52"
+	},
+	"soc":{
+		"vk":"https://vk.com/yarus57",
+		"vk_name":"vk.com/yarus57",
+		"fb":"https://www.facebook.com/groups/300842956941501/",
+		"fb_name":"fb.com/remont_yarus",
+		"tw":"https://twitter.com/dorohovdesign11",
+		"tw_name":"twitter.com/dorohovdesign11",
+		"inst":"https://www.instagram.com/remont_yarus/",
+		"inst_name":"remont_yarus"
+	},
+	"project":{
+		"1":"«Междуречье»",
+		"2":"«Новая Куликовка»",
+		"3":"«Усадьба Образцово»",
+		"4":"«Ново-образцово»"
+	}
+}

@@ -1,0 +1,37 @@
+@icon: 				Flaticon;
+.include-custom-font(@family: @din, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src:	url('@{url-path-fonts}/@{family}.woff2') format('woff2'),
+				url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-icon(@family: @icon, @weight: normal, @style: normal){
+	@font-face{			
+		font-family: "@{family}";			
+		src: url('@{url-path-fonts}/@{family}.woff') format('woff');
+		font-weight: @weight;
+		font-style: @style;		
+	}
+}
+.include-custom-font(@family: @din, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @din-med, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @din-bold, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @din-ebold, 		@weight: normal, @style: normal);
+
+.include-custom-font(@family: @proxima, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @proxima-light, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @proxima-bold, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @proxima-sbold, 		@weight: normal, @style: normal);
+.include-custom-font(@family: @proxima-ebold, 		@weight: normal, @style: normal);
+
+.include-custom-icon(@family: @icon, 			@weight: normal, @style: normal);
+
+
+@icon-arrow-down: 	"\f100";
+@icon-arrow-up: 	"\f101";
+@icon-close: 		"\f102";
+@icon-next: 		"\f103";
+@icon-prev: 		"\f104";
