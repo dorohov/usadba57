@@ -48,7 +48,7 @@
 				</h1>
 				<ul class="navbar-project">
 					<li><a href="/plan.html">Генплан</a></li>
-					<li><a href="#">Фото</a></li>
+					<li><a href="/gallery.html">Фото</a></li>
 					<li><a href="/location.html">Расположение</a></li>
 					<li><a href="#">Окружение</a></li>
 					<li><a href="/advantages.html">Преимущества</a></li>
@@ -80,10 +80,14 @@
 				<div class="row navbar-collapse-row">
 					<div class="cols navbar-nav-cols">
 						<ul class="nav navbar-nav">		
-							<li><a href="/about.html">О компании</a></li>
+							<!--<li><a href="/about.html">О компании</a></li>
 							<li><a href="/mortgage.html">Ипотека</a></li>
 							<li><a href="/payment.html">Рассрочка</a></li>
-							<li><a href="/contacts.html">Офис продаж</a></li>
+							<li><a href="/contacts.html">Офис продаж</a></li>-->
+							<li><a href="#">О компании</a></li>
+							<li><a href="#">Ипотека</a></li>
+							<li><a href="#">Рассрочка</a></li>
+							<li><a href="#">Офис продаж</a></li>
 						</ul> 
 					</div>	
 				</div>	
@@ -97,17 +101,41 @@
 </header> 
 	
 		<div class="content-block gallery-page-content second ">
-	<!-- <div class="_gpc__slick slick-slide">
-		<img src="/img/index/slider-item1-xs.jpg" alt="">
-		<img src="/img/index/slider-item1-xs.jpg" alt="">
-		<img src="/img/index/slider-item1-xs.jpg" alt="">
-		<img src="/img/index/slider-item1-xs.jpg" alt="">
-		<img src="/img/index/slider-item1-xs.jpg" alt="">
-		<img src="/img/index/slider-item1-xs.jpg" alt="">
-		<img src="/img/index/slider-item1-xs.jpg" alt="">
-	</div> -->
+	<div class="container">
+		<div class="row _gpc__row">
+			<div class="cols _gpc__img-cols">
+				<div class="_gpc__gallery">
+					<div class="_gpc__img" style="background-image: url(/img/temp/slide-item2.jpg)"></div>
+					<button type="button" class="_gpc__control prev btn-site"></button>
+					<button type="button" class="_gpc__control next btn-site"></button>
+				</div>
+			</div>
+			<div class="cols _gpc__preview-cols">
+				<div class="swiper-slide swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="_gpc__item"  style="background-image: url(/img/index/slider-item1-xs.jpg)"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="_gpc__item"  style="background-image: url(/img/index/slider-item1-xs.jpg)"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="_gpc__item"  style="background-image: url(/img/index/slider-item1-xs.jpg)"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="_gpc__item"  style="background-image: url(/img/index/slider-item1-xs.jpg)"></div>
+						</div>
+						<div class="swiper-slide">
+							<div class="_gpc__item"  style="background-image: url(/img/index/slider-item1-xs.jpg)"></div>
+						</div>
+					</div>
+					<!-- <div class="swiper-scrollbar"></div> -->
+					
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
 	
 		<footer class="footer-site">	
 	<div class="container">
@@ -166,6 +194,10 @@
 
 <script src="/plugins/jquery.scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="/js/retina.min.js" ></script>
-
+	    <link rel="stylesheet" href="/plugins/swiper/css/swiper.min.css">
+	    <script src="/plugins/swiper/js/swiper.min.js"></script>
+		<script>			
+			
+		</script>
 	</body>
 </html> 

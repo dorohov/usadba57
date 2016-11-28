@@ -1,131 +1,93 @@
 .gallery-page-content{
 
 }
-._gpc__owl{
-	&.owl-carousel {
-  max-width: 320px;
-  .owl-nav {
-    padding-top: .4em;
-    font-family: sans-serif;
-    font-size: .8em;
-    > div {
-      padding: .4em 1.4em;
-      border: 1px solid #333;
-      background: #000;
-      color: white;
-      border-radius: .4em;
-      background-image: linear-gradient(rgba(255, 255, 255, .3), rgba(0, 0, 0, .2));
-      box-shadow: .1em .1em .4em rgba(0, 0, 0, .5);
-      &:hover {
-        background-color: #333;
-      }
-    }
-    .owl-prev {
-      float: left;
-    }
-    .owl-next {
-      float: right;
-    }
-  }
+.swiper-slide{
+	
 }
+._gpc__row{
+	height: 100%;    
+	align-items: stretch;
+	@media @media-device{flex-wrap: wrap;}
 }
-
-/* Slider */
-/*
-.slick-slider {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
+._gpc__img-cols{
+	width: 83%;
+	@media @media-device{width: 100%}
+	@media @media-size-sm-l{width: 77%}
+	@media @media-size-mdl{width: 77%}
 }
-.slick-list {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    margin: 0;
-    padding: 0;
-
-    &:focus {
-        outline: none;
-    }
-
-    &.dragging {
-        cursor: pointer;
-        cursor: hand;
-    }
+._gpc__preview-cols{
+	width: 17%;
+	height: 100%;
+	position: relative;
+	@media @media-device{width: 100%}
+	@media @media-size-sm-p{height: 150px}
+	@media @media-size-sm-l{height: 300px; width: 23%}
+	@media @media-size-mdl{width: 23%}
 }
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0, 0, 0);
-    -ms-transform: translate3d(0, 0, 0);
-    -o-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+._gpc__gallery{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	@media @media-size-sm{margin-bottom: 35px}
+	@media @media-size-sm-p{height: 400px;}
+	@media @media-size-sm-l{height: 300px;}
+	@media @media-size-xs{display: none;}
 }
-
-.slick-track {
-    position: relative;
-    left: 0;
-    top: 0;
-    display: block;
-
-    &:before,
-    &:after {
-        content: "";
-        display: table;
-    }
-
-    &:after {
-        clear: both;
-    }
-
-    .slick-loading & {
-        visibility: hidden;
-    }
+.swiper-container {
+	width: 100%;
+	height: 100%;
+	padding-right: 50px;
+	@media @media-size-xs{display: none;}
 }
-.slick-slide {
-    float: left;
-    height: 100%;
-    min-height: 1px;
-    [dir="rtl"] & {
-        float: right;
-    }
-    img {
-        display: block;
-    }
-    &.slick-loading img {
-        display: none;
-    }
-
-    display: none;
-
-    &.dragging img {
-        pointer-events: none;
-    }
-
-    .slick-initialized & {
-        display: block;
-    }
-
-    .slick-loading & {
-        visibility: hidden;
-    }
-
-    .slick-vertical & {
-        display: block;
-        height: auto;
-        border: 1px solid transparent;
-    }
+._gpc__control{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	cursor: pointer;
+	@media @media-size-xs{display: none;}
+	&:before{
+		display: block;
+		font-family: @icon;
+		background: fadeout(@black, 50%);
+		width: 50px;
+		line-height: 80px;
+		font-size: 35px;
+		transition: @transition-site;
+	}
+	&:hover{
+		&:before{
+			background: fadeout(@black, 30%);
+		}
+	}
+	&.prev{
+		transform: translateY(-100%);
+		&::before{
+			content: @icon-arrow-up;
+		}
+	}
+	&.next{
+		transform: translateY(0%);
+		&::before{
+			content: @icon-arrow-down;
+		}
+	}
 }
-.slick-arrow.slick-hidden {
-    display: none;
+.swiper-slide{
 }
-*/
+._gpc__item{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+._gpc__img{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+}
