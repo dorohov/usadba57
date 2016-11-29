@@ -11,6 +11,16 @@
 }
 ._ipc__carousel{
 	@media @media-size-xs{display: none;}
+	/*.item{
+		.btn-village{
+			opacity: 0;
+		}
+		&.active{
+			.btn-village{
+				opacity: 1;
+			}
+		}
+	}*/
 }
 ._ipc__carousel-caption{
 	position: absolute;
@@ -92,6 +102,14 @@
 		text-align: center;
 		font-size: 40px;
 		font-weight: bold;
+		transition: 0.2s all;
+		transform-origin: center;
+	}
+	&:hover{
+		&:before{
+			transform: scale(1.15);
+			color: fadeout(@white, 15%);
+		}
 	}
 	&.prev{
 		top: 30%;
@@ -123,7 +141,7 @@
 	@media @media-device{flex-wrap: wrap}
 }
 ._ipc__carousel-indicators__cols{
-	width: 20%;
+	width: calc(100% / 6);
 	@media @media-size-xs-p{width: 100%; margin-bottom: 20px;}
 	@media @media-size-xs-l{width: 50%; margin-bottom: 30px;}
 	@media @media-size-sm{width: 33.333%;}
@@ -132,13 +150,11 @@
 			border: 1px solid fadeout(@white, 0%);
 			cursor: default;
 			opacity: 1;
+			.__preview{transform: scale(1);}
 		}
 	}
 }
 ._ipc__carousel-indicators__item{
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
 	width: 100%;
 	height: 150px;
 	display: block;	
@@ -146,6 +162,7 @@
 	border: 1px solid fadeout(@white, 100%);
 	transition: @transition-site;
 	cursor: pointer;
+	overflow: hidden;
 	@media @media-notsmart{opacity: 0.7;}
 	@media @media-size-xs{
 		height: 200px;
@@ -156,6 +173,17 @@
 	}
 	@media @media-size-mdl{height: 120px;}
 	@media @media-size-xl{height: 130px;}
+	.__preview{
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: @transition-site;
+		transform: scale(1.1); 
+	}
 	span{
 		font-size: @b-fs + 2px;
 		line-height: @b-lh;
@@ -165,10 +193,17 @@
 		width: 100%;
 		position: absolute;
 		bottom: -1px;
+		z-index: 2;
 		left: 0;
 		text-align: center;
 		padding: 10px 20px;
 		color: @black;
+	}
+	&:hover{
+		opacity: 0.9;
+		.__preview{
+			transform: scale(1); 
+		}
 	}
 }
 ._ipc__content-xs{

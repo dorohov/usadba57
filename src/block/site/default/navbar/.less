@@ -179,7 +179,7 @@
 			position: relative;
 			transition: @transition-site;
 			font-family: @b-nav-ff;
-			color: fadeout(@b-nav-color, 50%);
+			color: fadeout(@b-nav-color, 0%);
 			text-transform: uppercase;
 			border:0;
 			@media @media-device{
@@ -200,7 +200,7 @@
 				background: none;
 			}
 			&:hover{
-				color: @b-nav-color-hover;
+				color: fadeout(@b-nav-color, 50%);
 			}
 		}
 		&.active{
