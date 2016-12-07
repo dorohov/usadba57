@@ -8,18 +8,6 @@ $(function () {
 		center: [52.946256, 35.993770],
 		zoom: 15
 	};
-	
-	/*if($(document).width() < 1025) {
-		map_center = {
-			center: [52.9545, 36.0640], // расположение района
-			zoom: 17
-		}
-	} else {
-		map_center = {
-			center: [52.95464, 36.0620], // расположение района
-			zoom: 18
-		}		
-	}*/
 	var myMap;
 	
 	var initYandexMap = function() {		
