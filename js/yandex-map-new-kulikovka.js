@@ -21,7 +21,7 @@ $(function () {
 			hintContent: 'Коттеджный посёлок «Новая Куликовка»'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-location-new-kulikovka.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-location-new-kulikovka.png',
 			iconImageSize: [icon_l_w, icon_l_h],
 			iconImageOffset: [-(icon_l_w / 2), -icon_l_h]
 		});
@@ -29,7 +29,7 @@ $(function () {
 			hintContent: 'Остановка общественного транспорта'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-bus.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-bus.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -37,7 +37,7 @@ $(function () {
 			hintContent: 'Остановка общественного транспорта'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-bus.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-bus.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -45,7 +45,7 @@ $(function () {
 			hintContent: 'АЗС Газпром'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-gas.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-gas.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		}); 
@@ -53,7 +53,7 @@ $(function () {
 			hintContent: 'АЗС Octan'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-gas.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-gas.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -61,7 +61,7 @@ $(function () {
 			hintContent: 'АЗС Octan'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-gas.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-gas.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -69,7 +69,7 @@ $(function () {
 			hintContent: 'Кафе'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-cafe.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-cafe.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -77,7 +77,7 @@ $(function () {
 			hintContent: 'Магазин'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-shop.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-shop.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -85,7 +85,7 @@ $(function () {
 			hintContent: 'Детский сад'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-kindergarten.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-kindergarten.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -93,7 +93,7 @@ $(function () {
 			hintContent: 'Детский сад'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-kindergarten.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-kindergarten.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -101,7 +101,7 @@ $(function () {
 			hintContent: 'Покровская средняя общеобразовательная школа МБОУ'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-school.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-school.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -109,7 +109,7 @@ $(function () {
 			hintContent: 'МБОУ Малокуликовская средняя общеобразовательная школа Орловского района Орловской области'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-school.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-school.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -117,7 +117,7 @@ $(function () {
 			hintContent: 'Большекуликовская Основная Общеобразовательная школа'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-school.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-school.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -125,7 +125,7 @@ $(function () {
 			hintContent: 'Большекуликовская школа'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-school.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-school.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -133,7 +133,7 @@ $(function () {
 			hintContent: 'Отделение почтовой связи Куликовский 302516'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-post.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-post.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -141,7 +141,7 @@ $(function () {
 			hintContent: 'Отделение почтовой связи Большая Куликовка 302540'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-post.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-post.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -149,7 +149,7 @@ $(function () {
 			hintContent: 'Отделение почтовой связи Малая Куликовка 302515'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-post.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-post.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});

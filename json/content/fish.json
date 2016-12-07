@@ -1,4 +1,9 @@
 {
+	"url":{
+		"img": "/wp-content/themes/azbnbasetheme/img",
+		"fonts": "/wp-content/themes/azbnbasetheme/fonts",
+		"js": "/wp-content/themes/azbnbasetheme/js"
+	},
 	"contacts":{
 		"email":"a.oleynik@fedeco.ru",
 		"phone":"+7 (4862) 25-55-95",

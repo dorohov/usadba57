@@ -12,9 +12,10 @@
 	ymaps.ready(init);
 	
 	function init() {
-		var myMap = new ymaps.Map("map", {				
-			center: [52.946256, 35.993770],
-			zoom: 15
+		var myMap = new ymaps.Map("map", {	
+		center: [52.941041, 35.976148],
+			zoom: 16
+
 		});
 		
 		// Создаем многоугольник без вершин.
@@ -22,7 +23,7 @@
 			// Курсор в режиме добавления новых вершин.
 			editorDrawingCursor: "crosshair",
 			// Максимально допустимое количество вершин.
-			editorMaxPoints: 20,
+			editorMaxPoints: 40,
 			// Цвет заливки.
 			fillColor: 'rgba(0,0,0,0)',
 	        strokeColor: '#ff0000',

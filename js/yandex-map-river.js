@@ -33,7 +33,7 @@ $(function () {
 			hintContent: 'Коттеджный посёлок «Междуречье»'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-location-river.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-location-river.png',
 			iconImageSize: [icon_l_w, icon_l_h],
 			iconImageOffset: [-(icon_l_w / 2), -icon_l_h]
 		});
@@ -41,7 +41,7 @@ $(function () {
 			hintContent: 'Торговый центр'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-shop.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-shop.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -49,7 +49,7 @@ $(function () {
 			hintContent: 'Остановка общественного транспорта'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-bus.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-bus.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -57,7 +57,7 @@ $(function () {
 			hintContent: 'Детский сад'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-kindergarten.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-kindergarten.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -65,7 +65,7 @@ $(function () {
 			hintContent: 'Детский сад'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-kindergarten.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-kindergarten.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -73,7 +73,7 @@ $(function () {
 			hintContent: 'Детский сад'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-kindergarten.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-kindergarten.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -81,7 +81,7 @@ $(function () {
 			hintContent: 'Дошкольное отделение № 1'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-kindergarten.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-kindergarten.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -89,7 +89,7 @@ $(function () {
 			hintContent: 'Школа'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-school.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-school.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -97,7 +97,7 @@ $(function () {
 			hintContent: 'Магазин'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-shop.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-shop.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
@@ -105,7 +105,7 @@ $(function () {
 			hintContent: 'Отделение почтовой связи Знаменка 302520'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/location/icon-post.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/location/icon-post.png',
 			iconImageSize: [icon_w, icon_h],
 			iconImageOffset: [-(icon_w / 2), -icon_h]
 		});
