@@ -1,6 +1,6 @@
 $('img').addClass('img-responsive');
 $('.text-block ul').addClass('ul-site');
-var url = window.location.pathname;
+var url = window.location.href;
 $('.navbar-nav a[href="'+url+'"]').parent().addClass('active'); 
 $('.navbar-project a[href="'+url+'"]').parent().addClass('active'); 
 $('.tabs-block a[href="'+url+'"]').parent().addClass('active'); 
@@ -58,5 +58,3 @@ $("._gpc__owl").owlCarousel({
 	//vertical: true,
 	//verticalSwiping: true
 });*/
-
-

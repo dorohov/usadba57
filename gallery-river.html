@@ -47,6 +47,7 @@
 					<span>«Междуречье»</span>
 				</h1>
 				<ul class="navbar-project">
+					<li><a href="/about-river.html">О поселке</a></li>
 					<li><a href="/plan-river.html">Генплан</a></li>
 					<li><a href="/gallery-river.html">Фото</a></li> 
 					<li><a href="/location-river.html">Расположение</a></li>
@@ -102,36 +103,24 @@
 	
 		<div class="content-block gallery-page-content second ">
 	<div class="container">
-		<div class="row _gpc__row">
-			<div class="cols _gpc__img-cols">
-				<div class="_gpc__gallery">
-					<div class="_gpc__img" style="background-image: url(/img/temp/slide-item2.jpg)"></div>
-					<button type="button" class="_gpc__control prev btn-site"></button>
-					<button type="button" class="_gpc__control next btn-site"></button>
-				</div>
+		<div id="imageGallery" class="_gpc__gallery">
+			<div class="_gpc__gallery-item" data-thumb="/img/temp/item1-tm.jpg" data-src="/img/temp/slide-item2.jpg">
+				<img src="/img/temp/item1.jpg" alt="">
 			</div>
-			<div class="cols _gpc__preview-cols">
-				<div class="swiper-slide swiper-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<div class="_gpc__item"  style="background-image: url(/img/index/slider-item1-xs.jpg)"></div>
-						</div>
-						<div class="swiper-slide">
-							<div class="_gpc__item"  style="background-image: url(/img/index/slider-item1-xs.jpg)"></div>
-						</div>
-						<div class="swiper-slide">
-							<div class="_gpc__item"  style="background-image: url(/img/index/slider-item1-xs.jpg)"></div>
-						</div>
-						<div class="swiper-slide">
-							<div class="_gpc__item"  style="background-image: url(/img/index/slider-item1-xs.jpg)"></div>
-						</div>
-						<div class="swiper-slide">
-							<div class="_gpc__item"  style="background-image: url(/img/index/slider-item1-xs.jpg)"></div>
-						</div>
-					</div>
-					<!-- <div class="swiper-scrollbar"></div> -->
-					
-				</div>
+			<div class="_gpc__gallery-item" data-thumb="/img/temp/item1-tm.jpg" data-src="/img/temp/slide-item2.jpg">
+				<img src="/img/temp/item1.jpg" alt="">
+			</div>
+			<div class="_gpc__gallery-item" data-thumb="/img/temp/item1-tm.jpg" data-src="/img/temp/slide-item2.jpg">
+				<img src="/img/temp/item1.jpg" alt="">
+			</div>
+			<div class="_gpc__gallery-item" data-thumb="/img/temp/item1-tm.jpg" data-src="/img/temp/slide-item2.jpg">
+				<img src="/img/temp/item1.jpg" alt="">
+			</div>
+			<div class="_gpc__gallery-item" data-thumb="/img/temp/item1-tm.jpg" data-src="/img/temp/slide-item2.jpg">
+				<img src="/img/temp/item1.jpg" alt="">
+			</div>
+			<div class="_gpc__gallery-item" data-thumb="/img/temp/item1-tm.jpg" data-src="/img/temp/slide-item2.jpg">
+				<img src="/img/temp/item1.jpg" alt="">
 			</div>
 		</div>
 	</div>
@@ -193,11 +182,92 @@
 <script src="/js/jquery.validationEngine.js" ></script>
 
 <script src="/plugins/jquery.scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="/js/retina.min.js" ></script>
-	    <link rel="stylesheet" href="/plugins/swiper/css/swiper.min.css">
-	    <script src="/plugins/swiper/js/swiper.min.js"></script>
-		<script>			
-			
+		
+		<link rel="stylesheet" type="text/css" href="/css/lightslider.css" />
+		<link rel="stylesheet" type="text/css" href="/css/lightgallery.css" />
+		<script type="text/javascript">
+			$(document).ready(function() {
+				if (device.mobile()) {
+					$('#imageGallery').lightGallery({
+					    thumbnail:true
+					});	
+				} else {
+					$('#imageGallery').lightSlider({
+						gallery:true,
+						verticalHeight:600,
+						vThumbWidth:200,
+						item:1,
+						vertical: true,
+						thumbItem:4,
+						slideMargin:0,
+						thumbMargin: 20,
+						galleryMargin: 0, 
+						enableDrag: false,
+						currentPagerPosition:'left',
+						onSliderLoad: function(el) {
+							el.lightGallery({
+								selector: '#imageGallery .lslide'
+							});
+						}, 	  
+						responsive : [
+				            {
+				                breakpoint:1661,
+				                settings: {
+									verticalHeight:459,
+									vThumbWidth:145,
+			                  	}
+				            },
+				            {
+				                breakpoint:1500,
+				                settings: {
+									verticalHeight:455,
+									vThumbWidth:135,
+			                  	}
+				            },
+				            {
+				                breakpoint:1399,
+				                settings: {
+									verticalHeight:345,
+									vThumbWidth:150,
+									thumbItem:3,
+			                  	}
+				            },
+				            {
+				                breakpoint:1300,
+				                settings: {
+									verticalHeight:310,
+									vThumbWidth:130,
+									thumbItem:3,
+			                  	}
+				            },
+				            {
+				                breakpoint:900,
+				                settings: {
+									verticalHeight:280,
+									vThumbWidth:75,
+									thumbItem:3,
+			                  	}
+				            },
+				            {
+				                breakpoint:767,
+				                settings: {
+									verticalHeight:150,
+			                  	}
+				            }
+				        ]
+					});
+
+				}  
+
+			});
 		</script>
+		<!-- light Slider -->
+		<script src="/plugins/lightSlider/js/lightslider.min.js"></script>
+		<!-- light Gallery -->
+		<script src="/plugins/lightGallery/js/lightgallery.js"></script>
+		<script src="/plugins/lightGallery/js/lg-thumbnail.js"></script>
+		<script src="/plugins/lightGallery/js/lg-zoom.js"></script>
+
+		<script src="/js/retina.min.js"></script>
 	</body>
 </html> 

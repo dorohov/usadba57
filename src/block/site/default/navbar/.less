@@ -351,15 +351,25 @@
 	@media @media-size-xs{flex-wrap: wrap;}
 	> li{
 		margin: 0 15px 10px;
+		@media @media-screen{margin: 0 10px 10px;}
+		@media @media-size-xxl{margin: 0 15px 10px;}
 		@media @media-size-xs{margin: 0 10px 10px;}
 		> a{
 			display: block;
-			font-size: @b-fs + 4px; //20px
 			line-height: @b-lh + 2px; //26px
 			border-bottom: 2px solid fadeout(@white, 100%);
+			@media @media-size-sm{
+				font-size: @b-fs + 2px; 
+			}
+			@media @media-screen{
+				font-size: @b-fs + 2px; //20px
+			}
 			@media @media-size-md{
 				font-size: @b-fs; 
 				line-height: @b-lh;
+			}
+			@media @media-size-xxl{
+				font-size: @b-fs + 4px; //20px
 			}
 		}
 		&.active{

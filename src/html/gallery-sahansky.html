@@ -11,10 +11,93 @@
 		[[azbntple tpl="/src/block/site/default/footer/.html" class="footer-site" ]]	
 			
 		[[azbntple tpl="/src/block/site/default/head/script.html" ]]
-	    <link rel="stylesheet" href="/plugins/swiper/css/swiper.min.css">
-	    <script src="/plugins/swiper/js/swiper.min.js"></script>
-		<script>			
-			
+	    
+		
+		<link rel="stylesheet" type="text/css" href="/css/lightslider.css" />
+		<link rel="stylesheet" type="text/css" href="/css/lightgallery.css" />
+		<script type="text/javascript">
+			$(document).ready(function() {
+				if (device.mobile()) {
+					$('#imageGallery').lightGallery({
+					    thumbnail:true
+					});	
+				} else {
+					$('#imageGallery').lightSlider({
+						gallery:true,
+						verticalHeight:600,
+						vThumbWidth:200,
+						item:1,
+						vertical: true,
+						thumbItem:4,
+						slideMargin:0,
+						thumbMargin: 20,
+						galleryMargin: 0, 
+						enableDrag: false,
+						currentPagerPosition:'left',
+						onSliderLoad: function(el) {
+							el.lightGallery({
+								selector: '#imageGallery .lslide'
+							});
+						}, 	  
+						responsive : [
+				            {
+				                breakpoint:1661,
+				                settings: {
+									verticalHeight:459,
+									vThumbWidth:145,
+			                  	}
+				            },
+				            {
+				                breakpoint:1500,
+				                settings: {
+									verticalHeight:455,
+									vThumbWidth:135,
+			                  	}
+				            },
+				            {
+				                breakpoint:1399,
+				                settings: {
+									verticalHeight:345,
+									vThumbWidth:150,
+									thumbItem:3,
+			                  	}
+				            },
+				            {
+				                breakpoint:1300,
+				                settings: {
+									verticalHeight:310,
+									vThumbWidth:130,
+									thumbItem:3,
+			                  	}
+				            },
+				            {
+				                breakpoint:900,
+				                settings: {
+									verticalHeight:280,
+									vThumbWidth:75,
+									thumbItem:3,
+			                  	}
+				            },
+				            {
+				                breakpoint:767,
+				                settings: {
+									verticalHeight:150,
+			                  	}
+				            }
+				        ]
+					});
+
+				}  
+
+			});
 		</script>
+		<!-- light Slider -->
+		<script src="/plugins/lightSlider/js/lightslider.min.js"></script>
+		<!-- light Gallery -->
+		<script src="/plugins/lightGallery/js/lightgallery.js"></script>
+		<script src="/plugins/lightGallery/js/lg-thumbnail.js"></script>
+		<script src="/plugins/lightGallery/js/lg-zoom.js"></script>
+
+		<script src="/js/retina.min.js"></script>
 	</body>
 </html> 

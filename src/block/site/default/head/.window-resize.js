@@ -47,7 +47,7 @@ if (device.mobile() || device.tablet()) {
 $(".navbar-fixed-top").autoHidingNavbar();
 $('.news-item__preview a').css("height", w_news_preview);
 
-
+/*
 if($(".swiper-container").size() > 0){
 	var swiper = new Swiper('.swiper-container', {	
 		pagination: '.swiper-pagination',
@@ -77,4 +77,4 @@ if($(".swiper-container").size() > 0){
 			}
 		}
 	});
-}
+}*/
