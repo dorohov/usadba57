@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Редактор многоугольника</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects,package.editor&lang=ru-RU" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+	
+	ymaps.ready(init);
+	
+	function init() {
+		var myMap = new ymaps.Map("map", {				
+			center: [52.934749, 36.189987],
+			zoom: 16
+		});
+		
+		// Создаем многоугольник без вершин.
+		var myPolygon = new ymaps.Polygon([], {}, {
+			// Курсор в режиме добавления новых вершин.
+			editorDrawingCursor: "crosshair",
+			// Максимально допустимое количество вершин.
+			editorMaxPoints: 20,
+			// Цвет заливки.
+			fillColor: 'rgba(0,0,0,0)',
+	        strokeColor: '#ff0000',
+	        opacity: 0.5,
+			// Ширина обводки.
+			strokeWidth: 5
+		});
+		// Добавляем многоугольник на карту.
+		myMap.geoObjects.add(myPolygon);
+		myMap.setType('yandex#hybrid');	
+
+		// В режиме добавления новых вершин меняем цвет обводки многоугольника.
+		var stateMonitor = new ymaps.Monitor(myPolygon.editor.state);
+		stateMonitor.add("drawing", function (newValue) {
+			myPolygon.options.set("strokeColor", newValue ? '#FF0000' : '#0000FF');
+		});
+
+		// Включаем режим редактирования с возможностью добавления новых вершин.
+		myPolygon.editor.startDrawing();
+		
+		myPolygon.geometry.events.add('change', function () {
+			document.getElementById('result').innerHTML = myPolygon.geometry.getCoordinates().toString();
+		});
+	}
+	
+	
+	</script>
+</head>
+
+<body>
+	<div id="map" style="width:1024px; height:768px;"></div>
+	
+	<div class="" style="margin-top:40px;" >
+		<textarea id="result" style="margin:0px; display:block; height:300px;" ></textarea>
+	</div>
+</body>
+
+</html>
