@@ -4,6 +4,11 @@
 	z-index: 5;
 	@media @media-size-xs{padding: 15px 0 25px;}
 	@media @media-size-xl{padding: 20px 0;}
+	&.index{
+		@media @media-screen{
+			.header__navbar-cols{width: 30%}
+		}
+	}
 	&.second{
 		@media @media-screen{
 			position: absolute;
@@ -23,10 +28,12 @@
 	@media @media-size-mdl{width: 15%;}
 }
 .header__note-cols{
-	width: 25%;
+	width: 28%;
 	text-align: center;
 	font-family: @din-med;
 	@media @media-device{width: 100%;}
+	@media @media-screen{max-width: 320px;}
+	@media @media-size-xxl{max-width: 360px;}
 	@media @media-size-mdl{width: 40%;}
 }
 .header-second__note-cols{

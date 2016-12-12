@@ -5,9 +5,23 @@ body {
 	@media @media-size-xs 	{font-size: @b-fs - 2px; line-height: @b-lh - 4px;} 	// 14/22
 }
 h1, h2, h3, h4, h5, h6{
-	//font-family: @bender; 
+	font-family: @din-bold; 
 	margin: 0 0 10px;
 	font-weight: normal;
+}
+.heading-site{
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	@media @media-device{
+		br{display: none;}
+	}
+}
+
+h1{
+	@media @media-screen	{font-size: @b-fs + 12px; line-height: @b-lh + 14px;} 	// 28/38
+	@media @media-size-xs	{font-size: @b-fs + 8px; line-height: @b-lh + 10px;} 	// 24/34
+	@media @media-size-sml	{font-size: @b-fs + 6px; line-height: @b-lh + 8px;} 	// 22/32
 }
 /*
 i, em{font-style: @din-ital;}
