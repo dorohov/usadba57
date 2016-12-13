@@ -167,12 +167,45 @@
 	width: 100%;
 	&:before, &:after{display: none;}
 	float: none;
-	padding: 5px 0 0 0;
+	padding: 0;
 	margin: 0;
 	flex-wrap: wrap;
 	> li{			
 		margin-bottom: 8px; width: 100%;
-		@media @media-screen{text-align: right;}
+		@media @media-screen{text-align: right;}		
+		@media @media-device{
+			font-size: @b-fs;
+		}
+		@media @media-screen{
+			font-size: @b-fs + 8px; //24px; 
+			line-height: @b-lh + 4px; //28px;
+			margin-bottom: 10px;
+		}
+		@media @media-size-xxl{
+			font-size: @b-fs + 12px; //28px; 
+			line-height: @b-lh + 8px; //32px;
+		}
+		@media @media-size-mdl{
+			font-size: @b-fs + 6px; //22px; 
+			line-height: @b-lh; //24px;
+		}	
+		
+		body.second-page &{
+			@media @media-screen{
+				font-size: @b-fs + 6px; //22px; 
+				line-height: @b-lh - 0px; //24px;
+				margin-bottom: 8px;
+			}
+			@media @media-size-mdl{
+				margin-bottom: 5px;
+				font-size: @b-fs + 0px; //16px; 
+				line-height: @b-lh - 4px; //20px;
+			}
+			@media @media-size-xxl{
+				font-size: @b-fs + 8px; //24px; 
+				line-height: @b-lh + 4px; //28px;
+			}
+		}
 		> a{
 			font-kerning: none;
 			display: inline-block;
@@ -185,17 +218,10 @@
 			@media @media-device{
 				display: inline-block;				
 				padding: 8px 0px;
-				font-size: @b-fs;
 			}
 			@media @media-screen{
-				font-size: @b-fs + 12px; //28px; 
-				line-height: @b-lh + 6px; //30px;
 				padding: 0;  
 			}
-			@media @media-size-mdl{
-				font-size: @b-fs + 6px; //22px; 
-				line-height: @b-lh; //24px;
-			}	
 			&, &:hover, &:focus {
 				background: none;
 			}

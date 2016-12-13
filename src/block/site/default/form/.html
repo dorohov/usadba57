@@ -1,0 +1,25 @@
+<form action="#" class="form-site {{class}}"> 
+	<div class="{{prefix}}note">{{note}}</div>
+	<div class="row {{prefix}}row">
+		<div class="cols {{prefix}}cols">
+			<div class="{{prefix}}input">
+				<input type="text" class="{{prefix}}form-control form-control validate[required]" id="f[name]" placeholder="Ваше имя">
+			</div>	
+		</div>
+		<div class="cols {{prefix}}cols">
+			<div class="{{prefix}}input">
+				<input type="tel" class="{{prefix}}form-control form-control validate[required,custom[phone]]" id="f[phone]" placeholder="Ваш телефон">
+			</div>	
+		</div>
+		<div class="cols {{prefix}}cols">
+			<div class="{{prefix}}textarea">
+				<textarea class="{{prefix}}form-control form-control validate[required]" id="f[note]" placeholder="Текст сообщения"></textarea>
+			</div>	
+		</div>
+		<div class="cols {{prefix}}cols">
+			<div class="{{prefix}}input {{prefix}}btn">
+				<button type="submit" class="btn-site btn-blue btn-submit">{{btn_name}}</button>
+			</div>	
+		</div>
+	</div>
+</form> 

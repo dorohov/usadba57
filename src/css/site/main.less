@@ -14,7 +14,7 @@ body {
 		position: relative;
 		height: 100%;
 		&.body-index{
-			background-image: url(/img/index/slider-item1.jpg);
+			background-image: url(/img/bg/bg-river.jpg);
 			background-repeat: no-repeat;
 			background-position: center top;
 			background-size: cover;
@@ -100,7 +100,7 @@ ul{
 	&.second{
 		position: relative;
 		@media @media-size-xs{
-			padding: 0 0 25px 0;
+			padding-bottom: 25px;
 		}
 	}
 	.container{
@@ -109,9 +109,48 @@ ul{
 	}
 	&.white{
 		position: relative;
-		background: fadeout(@white, 10%);
+		background-color: fadeout(@white, 10%);
 		color: @black;
-		padding: 40px 0;
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	&.white-blue{
+		position: relative;
+		background: linear-gradient(
+			to right, 
+			fadeout(@white, 10%) 0%,
+			fadeout(@white, 10%) 35%,
+			fadeout(@blue, 10%) 35%,
+			fadeout(@blue, 10%) 100%
+		); 
+		color: @black;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		@media @media-size-xs{
+			background: fadeout(@white, 10%);
+		}
+		@media @media-size-sm-p{
+			padding-top: 25px;
+			padding-bottom: 25px;
+			background: linear-gradient(
+				to right, 
+				fadeout(@white, 10%) 0%,
+				fadeout(@white, 10%) 50%,
+				fadeout(@blue, 10%) 50%,
+				fadeout(@blue, 10%) 100%
+			); 
+		}
+		@media @media-size-sm-l{
+			padding-top: 25px;
+			padding-bottom: 25px;
+			background: linear-gradient(
+				to right, 
+				fadeout(@white, 10%) 0%,
+				fadeout(@white, 10%) 47%,
+				fadeout(@blue, 10%) 47%,
+				fadeout(@blue, 10%) 100%
+			); 
+		}
 	}
 }
 .heading-project-site{
@@ -147,11 +186,11 @@ ul{
 		}
 		@media @media-size-md{
 			font-size: @b-fs + 24px; //40px
-			line-height: @b-lh + 46px; //60px;	
+			line-height: @b-lh + 16px; //60px;	
 		}
 		@media @media-size-lg{
 			font-size: @b-fs + 34px; //50px
-			line-height: @b-lh + 56px; //80px;	
+			line-height: @b-lh + 36px; //60px;	
 		}
 		@media @media-size-xl{
 			font-size: @b-fs + 40px; //56px

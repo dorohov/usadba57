@@ -1,0 +1,37 @@
+<div class="{{class}}">
+	<div class="container">
+		<div class="scroller" data-mcs-theme="black" data-mcs-axis="y">
+			<div class="row {{prefix}}row">
+				<div class="cols {{prefix}}cols-left">
+					<h1 class="heading-site {{prefix}}heading-site">Свяжитесь с нами</h1>
+					<div class="{{prefix}}item">
+						<div>Номер телефона офиса продаж:</div>
+						<div><a href="tel:{{contacts.phone_tel}}"><span>{{contacts.phone}}</span></a></div>
+					</div>
+					<div class="{{prefix}}item">
+						<div>Адрес:</div>
+						<div><span>{{contacts.address}}</span></div>
+						<div><span>{{contacts.time}}</span></div>
+					</div>
+					[[azbntple 
+						tpl="/src/block/site/default/form/.html" 
+						class="contacts-form" 
+						prefix="_fms__" 
+						note="Вы можете оставить заявку, и мы обязательно свяжемся с Вами в ближайшее время" 
+						btn_name="Оставить заявку"
+					]] 
+					[[azbntple 
+						tpl="8/src/block/site/default/form/message.html" 
+						class="contacts-form-message" 
+						prefix="_fmms__" 
+						heading="Спасибо за заявку!" 
+						note="<p>Ваша заявка принята к обработке.</p><p>Наш менеджер свяжется с Вами в ближайшее время.</p>"
+					]] 
+				</div>
+				<div class="cols {{prefix}}cols-right">
+					<div id="map" class="map-yandex"></div>
+				</div>
+			</div>			
+		</div> 
+	</div>
+</div>

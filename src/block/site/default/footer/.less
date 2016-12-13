@@ -54,7 +54,8 @@
 	}
 }
 ._fs__phone-cols{
-	@media @media-size-sm{width: 33.3333%;}
+	//@media @media-size-sm{width: 33.3333%;}
+	@media @media-size-sm{width: 50%;}
 }
 ._fs__contacts-cols{
 	font-size: @b-fs + 4px; //20px;
@@ -65,7 +66,8 @@
 	@media @media-size-xxl{width: 40%;}
 }
 ._fs__dorohovdesign-cols{
-	@media @media-size-sm{width: 100%; margin-top: 25px;}
+	//@media @media-size-sm{width: 100%; margin-top: 25px;}
+	@media @media-size-sm{width: 50%;}
 
 }
 
@@ -88,6 +90,8 @@
 ._fs__dorohovdesign-row{
 	align-items: center;
 	@media @media-device{justify-content: center;}
+	@media @media-size-sm{justify-content: flex-end;}
+	margin: 0 -5px;
 	> .cols{padding: 0 5px;}
 }
 ._fs__dorohovdesign__logo{

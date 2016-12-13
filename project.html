@@ -74,6 +74,7 @@
 				<div class="row navbar-collapse-row">
 					<div class="cols navbar-nav-cols">
 						<ul class="nav navbar-nav">		
+							<li><a href="/about.html">главная</a></li>
 							<li><a href="/about.html">О проекте</a></li>
 							<li><a href="/project.html">Наши площадки</a></li>
 							<li><a href="/payment.html">Рассрочка</a></li>
@@ -90,7 +91,7 @@
 	</div>
 </header> 
 	
-		<div class="content-block project-page-content white">
+		<div class="content-block project-page-content white resize">
 	<div class="container">
 		<div class="scroller" data-mcs-theme="black" data-mcs-axis="y">
 			<h1 class="heading-site">Страница находится в разработке.</h1>			
@@ -102,7 +103,8 @@
 	<div class="container">
 		<div class="row _fs__row">
 			<div class="cols _fs__phone-cols">
-				<div class="_fs__phone"><a href="tel:+74862255595">+7 (4862) 25-55-95</a></div>
+			г.Орёл, ул. М.Горького, д. 67
+				<!-- <div class="_fs__phone"><a href="tel:+74862255595">+7 (4862) 25-55-95</a></div> -->
 			</div>
 			
 			<!--<div class="cols _fs__contacts-cols">
@@ -154,6 +156,56 @@
 <script src="/js/jquery.validationEngine.js" ></script>
 
 <script src="/plugins/jquery.scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+		<div class="modal fade" id="modal-reviews" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog _msr__dialog">
+		<div class="modal-content _msr__content">
+			<div class="modal-body _msr__body" >
+				<button type="button" class="btn-site btn-close modal-btn-close" data-dismiss="modal" aria-hidden="true"></button>
+				<div class="modal-block _msr__block">		
+					<h3 class="modal-title _msr__title">Напишите нам!</h3>
+					<form action="#" class="form-site contacts-form"> 
+	<div class="_fms__note">Вы можете оставить заявку, и мы обязательно свяжемся с Вами в ближайшее время</div>
+	<div class="row _fms__row">
+		<div class="cols _fms__cols">
+			<div class="_fms__input">
+				<input type="text" class="_fms__form-control form-control validate[required]" id="f[name]" placeholder="Ваше имя">
+			</div>	
+		</div>
+		<div class="cols _fms__cols">
+			<div class="_fms__input">
+				<input type="tel" class="_fms__form-control form-control validate[required,custom[phone]]" id="f[phone]" placeholder="Ваш телефон">
+			</div>	
+		</div>
+		<div class="cols _fms__cols">
+			<div class="_fms__textarea">
+				<textarea class="_fms__form-control form-control validate[required]" id="f[note]" placeholder="Текст сообщения"></textarea>
+			</div>	
+		</div>
+		<div class="cols _fms__cols">
+			<div class="_fms__input _fms__btn">
+				<button type="submit" class="btn-site btn-blue btn-submit">Оставить заявку</button>
+			</div>	
+		</div>
+	</div>
+</form>  
+				</div>
+			</div>
+		</div>
+	</div>
+</div>  
+		<div class="modal fade" id="modal-message" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog _msr__dialog">
+		<div class="modal-content _msr__content">
+			<div class="modal-body _msr__body" >
+				<button type="button" class="btn-site btn-close modal-btn-close" data-dismiss="modal" aria-hidden="true"></button>
+				<div class="modal-block _msr__block">		
+					<h3 class="modal-title _msr__title">Ваша заявка принята. Спасибо!</h3>
+					<p>Ваша заявка принята к обработке.</p><p>Наш менеджер свяжется с Вами в ближайшее время.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>   
 		<script src="/js/retina.min.js"></script>
 
 	</body>

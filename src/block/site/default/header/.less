@@ -6,6 +6,8 @@
 	@media @media-size-xl{padding: 20px 0;}
 	&.index{
 		@media @media-screen{
+			background: linear-gradient(to bottom,rgba(0,0,0,0.6) 0,rgba(0,0,0,0.2) 60%,rgba(0, 0, 0, 0) 100%);
+			.header__logotip-cols,
 			.header__navbar-cols{width: 30%}
 		}
 	}
@@ -65,9 +67,12 @@
 	padding-bottom: 15px;
 	margin-bottom: 15px;
 	@media @media-device{
-		max-width: 300px;
+		max-width: 250px;
 		margin-left: auto;
 		margin-right: auto;
+	}
+	@media @media-size-sm{
+		padding-bottom: 10px;
 	}
 	@media @media-size-xxl{
 		padding-bottom: 25px;
@@ -81,6 +86,11 @@
 	@media @media-size-xs{
 		font-size: @b-fs + 18px; //34px
 		line-height: @b-lh + 16px; //40px;
+	}
+	@media @media-size-sm{
+		font-size: @b-fs + 14px; //30px
+		line-height: @b-lh - 4px; //20px;
+		margin-bottom: 10px;
 	}
 	@media @media-size-mdl{
 		font-size: @b-fs + 14px; //30px
