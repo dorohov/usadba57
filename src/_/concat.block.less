@@ -1,3 +1,79 @@
+		.full-screen.page-loader {
+			@dark-el-color-bg:rgba(0,0,0,0.75);
+			@dark-el-color-font:#ffffff;
+			
+			@semi-dark-el-color-bg:rgba(0,0,0,0.4);
+			@semi-dark-el-color-font:#ffffff;
+			
+			transition: all 0.7s ease;
+			
+			opacity:0;
+			height: 0%;
+			
+			&.active {
+				opacity:1;
+				height: 100%;
+			}
+			
+			.process-container {
+				display:block;
+				position:relative;
+				width:300px;
+				height:3em;
+				line-height:3em;
+				margin:2em auto;
+				white-space:nowrap;
+				#fe.uppercase(lowercase);
+				#fe.bold();
+				#fe.size(1em);
+				#fe.bg(transparent);
+				#fe.color(@dark-el-color-font);
+				
+				.process-level {
+					position:absolute;
+					left:50%;
+					top:0;
+					display:block;
+					width: 0%;
+					height:100%;
+					margin:0 auto;
+					z-index:0;
+					overflow-x:hidden;
+					text-align:center;
+					#fe.underline(none);
+					
+					#fe.bg(@dark-el-color-font);
+					animation: processloading 1s infinite;
+				}
+				
+			}
+			
+			.close-loader {
+				position:relative;
+				z-index:2;
+				display:block;
+				margin:2em auto;
+				width:30em;
+				height:3em;
+				line-height:3em;
+				#fe.bold();
+				#fe.size(1em);
+				#fe.underline(none);
+				#fe.uppercase();
+				#fe.bg(@dark-el-color-font * 0.6);
+				#fe.color(@dark-el-color-bg);
+				
+				transition: all 0.4s ease;
+				
+				&:hover {
+					#fe.bg(@dark-el-color-font);
+				}
+			}
+			
+		}
+		._azbn__preloader-percent {
+			z-index:1;
+		}
 .footer-site{
 	position: relative;
 	z-index: 4;
@@ -33,15 +109,11 @@
 		}
 	}
 	.container{
-		padding-top: 45px;
-		padding-bottom: 35px;
+		padding-top: 35px;
+		padding-bottom: 25px;
 		@media @media-size-xs{
 			padding-top: 35px;
 			padding-bottom: 15px;
-		}
-		@media @media-size-mdl{
-			padding-top: 35px;
-			padding-bottom: 25px;
 		}
 	}
 }
@@ -125,7 +197,7 @@
 ._fms__form-control{
 	background:	@white;
 	border: 1px solid @b-form-i-border;   
-	height: 48px;
+	height: 44px;
 	padding: 10px 20px;
 	color: @black;
 	font-family: @b-form-i-ff;
@@ -1089,8 +1161,8 @@ textarea._fms__form-control{
 .about-page-content{}
 ._apc__note{
 	text-align: center;
-	font-size: @b-fs + 6px;
-	line-height: @b-lh + 4px;
+	font-size: @b-fs + 4px;
+	line-height: @b-lh + 2px;
 	margin-bottom: 35px;
 	@media @media-size-xs{
 		font-size: @b-fs + 2px;
@@ -1099,7 +1171,7 @@ textarea._fms__form-control{
 	@media @media-device{
 		br{display: none;}
 	}
-	@media @media-size-xxl{margin-bottom: 55px;}
+	@media @media-size-xxl{margin-bottom: 30px;}
 }
 ._apc__heading{
 	text-transform: uppercase;
@@ -1109,12 +1181,12 @@ textarea._fms__form-control{
 	line-height: @b-lh + 4px;
 	letter-spacing: 0.2px;
 	margin-bottom: 25px;
-	@media @media-size-xxl{margin-bottom: 45px;}
+	//@media @media-size-xxl{margin-bottom: 45px;}
 }
 ._apc__list{
 	font-family: @din;
 	font-size: @b-fs + 4px;
-	line-height: @b-lh + 6px;
+	line-height: @b-lh + 8px;
 	margin: 0 auto;
     max-width: 1100px;
 }
@@ -1145,6 +1217,9 @@ textarea._fms__form-control{
 	//align-items: center;
 	position: relative;
 	padding-left: 130px;
+	@media @media-screen{
+		&:last-child{margin-bottom: 0}
+	}
 }
 ._apc__adv-green{
 	color: #79c200;
@@ -1154,8 +1229,8 @@ textarea._fms__form-control{
 	left: 0;
     text-align: right;
     span{
-    	font-size: 70px;
-    	line-height: 44px;
+    	font-size: 60px;
+    	line-height: 34px;
     	display: block;
     	margin-left: auto;
     }
@@ -1389,7 +1464,8 @@ textarea._fms__form-control{
 	}
 }
 ._ctpc__heading-site{
-	text-align: left
+	text-align: left;
+	margin-bottom: 15px;
 }
 ._ctpc__row{
 	@media @media-device{flex-wrap: wrap;}
@@ -1781,21 +1857,17 @@ textarea._fms__form-control{
 .payment-page-content{}
 ._pypc__note{
 	text-align: center;
-	font-size: @b-fs + 6px;
-	line-height: @b-lh + 4px;
-	margin-bottom: 35px;
+	font-size: @b-fs + 4px;
+	line-height: @b-lh + 2px;
+	margin-bottom: 30px;
 	@media @media-size-xs{
 		font-size: @b-fs + 2px;
 		line-height: @b-lh + 0px;
 	}
-	@media @media-size-mdl{
-		font-size: @b-fs + 4px;
-		line-height: @b-lh + 2px;
-	}
 	@media @media-device{
 		br{display: none;}
 	}
-	@media @media-size-xxl{margin-bottom: 40px;}
+	//@media @media-size-xxl{margin-bottom: 40px;}
 }
 ._pypc__list{
     margin: 0 auto 25px;
@@ -1824,7 +1896,7 @@ textarea._fms__form-control{
 }
 ._pypc__adv-preview{
 	width: 200px;
-	height: 160px;
+	height: 130px;
 	margin: 0 auto 15px;
 	background-repeat: no-repeat;
 	background-size: contain;

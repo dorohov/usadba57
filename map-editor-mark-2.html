@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Редактор многоугольника</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="https://yastatic.net/jquery/3.1.0/jquery.js" type="text/javascript"></script>
+	<script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects,package.editor&lang=ru-RU" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+	
+	ymaps.ready(init);
+	
+	function patchCoord(arr) {
+		var _arr = [];
+		
+		for(var i in arr) {
+			if(typeof arr[i] == 'number') {
+				_arr[i] = parseFloat(arr[i].toFixed(6));
+			} else {
+				_arr[i] = patchCoord(arr[i]);
+			}
+		}
+		
+		return _arr;
+	};
+	
+	function init() {
+		var myMap = new ymaps.Map("map", {
+			center: [52.889354,36.038794],
+			zoom: 18,
+		});
+		
+		var myGeoObject2 = new ymaps.GeoObject({
+	        geometry: {
+	            type: "Polygon",
+	            coordinates: [[[52.885896,36.035876],[52.887525,36.034417],[52.887772,36.033988],[52.888635,36.035265],[52.888726,36.035082],[52.889433,36.036262],[52.889699,36.036563],[52.889965,36.037003],[52.890899,36.038108],[52.891315,36.038494],[52.891217,36.038601],[52.892385,36.03947],[52.892846,36.040189],[52.889362,36.044095]]],
+	            fillRule: "nonZero"
+	        },
+	    }, {
+	        fillColor: 'rgba(0,0,0,0)',
+	        strokeColor: '#037ee7',
+	        opacity: 0.5,
+	        strokeWidth: 5,
+	        strokeStyle: 'solid'
+	    });
+		myMap.geoObjects.add(myGeoObject2);
+		
+		var clr_green = 'rgba(94,177,50,0.99)';
+		var clr_grey = 'rgba(186,188,185,0.99)';
+		var opct = 0.75; // opacity
+		
+		// Создаем объекты участков
+		var place_2_grey_01 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889645,36.037444],[52.889970,36.037019],[52.890896,36.038114],[52.891218,36.038412],[52.890602,36.039275]]],fillRule: "nonZero"},}, {fillColor: clr_grey,opacity: opct,strokeWidth: 0,});
+		var place_2_grey_02 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.891099,36.040225],[52.891901,36.039119],[52.892380,36.039474],[52.892840,36.040189],[52.891727,36.041434]]],fillRule: "nonZero"},}, {fillColor: clr_grey,opacity: opct,strokeWidth: 0,});
+		//
+		var place_2_01 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887198,36.034720],[52.887468,36.035136],[52.887164,36.035422],[52.886999,36.034899]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_02 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886996,36.034902],[52.887161,36.035423],[52.886948,36.035622],[52.886784,36.035091]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_03 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886780,36.035094],[52.886945,36.035627],[52.886726,36.035831],[52.886549,36.035302]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_04 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886545,36.035305],[52.886722,36.035835],[52.886504,36.036039],[52.886323,36.035505]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_05 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886319,36.035508],[52.8865,36.036044],[52.886293,36.036237],[52.886103,36.035700]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_06 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886099,36.035704],[52.886290,36.036241],[52.886122,36.036401],[52.885903,36.035880]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_07 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887271,36.034656],[52.887531,36.034420],[52.887772,36.033999],[52.888095,36.034478],[52.887544,36.035074]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_08 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887546,36.03508],[52.888099,36.034484],[52.888390,36.034913],[52.887853,36.035552]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_09 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887856,36.035559],[52.888393,36.034919],[52.888636,36.035276],[52.888726,36.035094],[52.888817,36.035245],[52.888143,36.036005]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_10 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888146,36.03601],[52.888820,36.035250],[52.889089,36.035699],[52.888447,36.036473]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_11 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888451,36.036478],[52.889092,36.035705],[52.889373,36.036168],[52.888743,36.036931]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_12 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888747,36.036936],[52.889375,36.036175],[52.889432,36.036270],[52.889687,36.036558],[52.889025,36.037367]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_13 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889029,36.037372],[52.889692,36.036561],[52.889966,36.037015],[52.889332,36.037842]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_14 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887348,36.035409],[52.887533,36.035237],[52.887805,36.035659],[52.887563,36.035885]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_15 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887565,36.035893],[52.887809,36.035665],[52.888082,36.036088],[52.887801,36.036373]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_16 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887135,36.035606],[52.887343,36.035413],[52.887558,36.035889],[52.887346,36.036089]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_17 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887348,36.036096],[52.887560,36.035896],[52.887797,36.036378],[52.887572,36.036607]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_18 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886924,36.035798],[52.88713,36.035609],[52.887341,36.036092],[52.887135,36.036286]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_19 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887138,36.036292],[52.887343,36.036099],[52.887569,36.036612],[52.887369,36.036813]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_20 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886728,36.035983],[52.886920,36.035804],[52.887131,36.036290],[52.886935,36.036472]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_21 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886938,36.036478],[52.887133,36.036297],[52.887365,36.036817],[52.887163,36.037024]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_22 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886529,36.036164],[52.886723,36.035986],[52.886932,36.036476],[52.886736,36.036662]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_23 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886934,36.036481],[52.887159,36.037027],[52.886971,36.037221],[52.886738,36.036669]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_24 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887927,36.036388],[52.888135,36.036170],[52.888404,36.036587],[52.888151,36.036864]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_25 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888153,36.036871],[52.888407,36.036593],[52.888671,36.037],[52.888377,36.037348]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_26 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887709,36.036613],[52.887922,36.036393],[52.888147,36.036868],[52.887923,36.037116]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_27 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887926,36.037122],[52.888149,36.036875],[52.888374,36.037352],[52.888141,36.037626]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_28 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887482,36.036847],[52.887704,36.036617],[52.887919,36.037120],[52.887700,36.037360]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_29 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887702,36.037366],[52.887922,36.037127],[52.888137,36.037631],[52.887924,36.037882]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_30 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887241,36.037097],[52.887477,36.036851],[52.887697,36.037364],[52.887465,36.037619]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_31 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887468,36.037625],[52.887699,36.037371],[52.887921,36.037886],[52.887691,36.038158]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_32 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887016,36.037328],[52.887236,36.037101],[52.887461,36.037623],[52.887242,36.037865]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_33 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887244,36.037874],[52.887464,36.03763],[52.887687,36.038163],[52.887471,36.038421]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_34 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888514,36.037342],[52.888727,36.037088],[52.888992,36.037497],[52.888735,36.037823]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_35 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888737,36.037830],[52.888995,36.037503],[52.889268,36.037926],[52.888966,36.038320]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_36 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888327,36.037564],[52.88851,36.037347],[52.888731,36.037828],[52.888542,36.038068]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_37 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888544,36.038075],[52.888733,36.037835],[52.888962,36.038325],[52.888766,36.03858]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_38 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888121,36.037810],[52.888323,36.037569],[52.888538,36.038073],[52.888346,36.038317]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_39 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888348,36.038324],[52.888540,36.038080],[52.888763,36.038585],[52.888574,36.038831]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_40 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887903,36.038070],[52.888117,36.037815],[52.888342,36.038322],[52.888134,36.038586]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_41 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888136,36.038593],[52.888344,36.038329],[52.888571,36.038836],[52.888368,36.039101]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_42 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887714,36.038295],[52.887899,36.038075],[52.888130,36.038591],[52.887943,36.038828]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_43 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887945,36.038836],[52.888132,36.038598],[52.888364,36.039106],[52.888173,36.039354]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_44 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887518,36.038528],[52.887710,36.038300],[52.887939,36.038834],[52.887749,36.039075]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_45 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887752,36.039081],[52.887941,36.038842],[52.888169,36.039359],[52.887975,36.039616]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_46 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886461,36.036227],[52.886164,36.036501],[52.886302,36.036826],[52.886576,36.036502]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_47 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886578,36.036509],[52.886710,36.036823],[52.886435,36.037140],[52.886305,36.036831]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_48 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886713,36.036830],[52.886836,36.037124],[52.886565,36.037448],[52.886437,36.037144]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_49 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886839,36.037130],[52.886965,36.037430],[52.886699,36.037767],[52.886567,36.037453]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_50 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886968,36.037436],[52.887111,36.037781],[52.886841,36.038105],[52.886701,36.037771]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_51 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886844,36.038111],[52.887114,36.037788],[52.887239,36.038083],[52.886965,36.038398]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_52 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.886967,36.038403],[52.887242,36.038090],[52.887374,36.038406],[52.887098,36.038714]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_53 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887100,36.038718],[52.887377,36.038411],[52.887499,36.038706],[52.887226,36.039018]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_54 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887228,36.039022],[52.887501,36.038712],[52.887632,36.039020],[52.887360,36.039336]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_55 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887363,36.039342],[52.887635,36.039027],[52.887771,36.039352],[52.887502,36.039672]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_56 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887504,36.039677],[52.887773,36.039358],[52.887915,36.039696],[52.887654,36.040034]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_57 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889434,36.037869],[52.889632,36.037613],[52.889857,36.038042],[52.889636,36.038317]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_58 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889639,36.038325],[52.88986,36.038048],[52.890100,36.038503],[52.889856,36.038805]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_59 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889229,36.038136],[52.889430,36.037874],[52.889632,36.038323],[52.889426,36.038579]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_60 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889429,36.038586],[52.889634,36.038330],[52.889851,36.038810],[52.889647,36.039063]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_61 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889017,36.038410],[52.889225,36.038141],[52.889422,36.038585],[52.889218,36.038839]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_62 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889220,36.038846],[52.889425,36.038592],[52.889643,36.039068],[52.889444,36.039317]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_63 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888823,36.038662],[52.889013,36.038414],[52.889214,36.038844],[52.88902,36.039086]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_64 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889023,36.039094],[52.889216,36.038851],[52.889440,36.039322],[52.889244,36.039566]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_65 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888629,36.038913],[52.888819,36.038666],[52.889017,36.039092],[52.88882,36.039338]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_66 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888822,36.039345],[52.889019,36.039099],[52.889240,36.039571],[52.889039,36.039821]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_67 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888418,36.039187],[52.888625,36.038918],[52.888816,36.039343],[52.888604,36.039608]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_68 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888606,36.039615],[52.888818,36.039351],[52.889035,36.039826],[52.888816,36.040098]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_69 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888226,36.039438],[52.888414,36.039192],[52.888600,36.039613],[52.888409,36.039853]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_70 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888412,36.039861],[52.888602,36.039621],[52.888812,36.040103],[52.888623,36.040337]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_71 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888014,36.039709],[52.888222,36.039442],[52.888404,36.039858],[52.888189,36.040128]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_72 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888193,36.040134],[52.888407,36.039866],[52.888619,36.040343],[52.888397,36.040622]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_73 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889931,36.038865],[52.890147,36.038593],[52.890377,36.039030],[52.890149,36.039313]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_74 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890151,36.039320],[52.890381,36.039035],[52.890624,36.039500],[52.890377,36.039793]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_75 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889720,36.039131],[52.889927,36.038870],[52.890145,36.039318],[52.889924,36.039596]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_76 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889927,36.039602],[52.890147,36.039325],[52.890373,36.039797],[52.890136,36.040083]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_77 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889497,36.039412],[52.889716,36.039135],[52.889920,36.039601],[52.889701,36.039874]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_78 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889703,36.039882],[52.889923,36.039607],[52.890132,36.040087],[52.889910,36.040355]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_79 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889287,36.039676],[52.889493,36.039416],[52.889697,36.039879],[52.889485,36.040145]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_80 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889487,36.040152],[52.889699,36.039887],[52.889907,36.040361],[52.889687,36.040626],]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_81 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889066,36.039953],[52.889283,36.039681],[52.889481,36.040150],[52.889264,36.040422]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_82 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889266,36.040429],[52.889483,36.040157],[52.889683,36.040630],[52.889464,36.040893]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_83 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888851,36.040224],[52.889062,36.039958],[52.889261,36.040428],[52.889053,36.040687]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_84 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889056,36.040694],[52.889263,36.040435],[52.889461,36.040899],[52.889255,36.041144]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_85 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888646,36.040481],[52.888847,36.040228],[52.88905,36.040693],[52.888853,36.040939]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_86 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888855,36.040946],[52.889053,36.040699],[52.889252,36.041149],[52.889052,36.041388]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_87 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888444,36.040734],[52.888642,36.040486],[52.888849,36.040945],[52.888642,36.041205]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_88 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888644,36.041211],[52.888851,36.040952],[52.889048,36.041393],[52.888830,36.041654]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_89 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890441,36.039869],[52.890671,36.039591],[52.890910,36.040046],[52.890651,36.040352]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_90 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890653,36.040359],[52.890913,36.040052],[52.891155,36.040511],[52.890865,36.040845]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_91 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890220,36.040134],[52.890437,36.039874],[52.890647,36.040356],[52.890426,36.040618]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_92 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890429,36.040624],[52.890649,36.040363],[52.890861,36.040850],[52.890637,36.041109]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_93 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889990,36.040412],[52.890216,36.040139],[52.890422,36.040623],[52.890199,36.040888]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_94 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890202,36.040894],[52.890425,36.040629],[52.890633,36.041114],[52.890411,36.041371]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_95 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889765,36.040682],[52.889986,36.040416],[52.890195,36.040893],[52.889972,36.041157]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_96 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889975,36.041163],[52.890198,36.040899],[52.890407,36.041375],[52.890182,36.041635]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_97 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889547,36.040945],[52.889761,36.040686],[52.889968,36.041161],[52.889751,36.041418]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_98 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889754,36.041425],[52.889971,36.041167],[52.890178,36.04164],[52.889956,36.041896]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_99 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889319,36.041219],[52.889543,36.040949],[52.889747,36.041423],[52.889521,36.041691]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_100 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889523,36.041698],[52.889750,36.041430],[52.889952,36.041901],[52.889724,36.042165]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_101 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889099,36.041485],[52.889315,36.041223],[52.889517,36.041695],[52.889299,36.041953]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_102 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889301,36.041961],[52.889519,36.041703],[52.889720,36.042169],[52.8895,36.042424]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_103 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888873,36.041755],[52.889095,36.041489],[52.889295,36.041958],[52.889071,36.042225]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_104 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889073,36.042231],[52.889297,36.041965],[52.889496,36.042428],[52.889267,36.042694]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_105 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890980,36.040860],[52.891202,36.040601],[52.891439,36.041052],[52.891200,36.041324]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_106 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.891203,36.041331],[52.891442,36.041059],[52.891673,36.041497],[52.891419,36.041781]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_107 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890785,36.041088],[52.890976,36.040865],[52.891196,36.041329],[52.890989,36.041565]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_108 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890991,36.041574],[52.891199,36.041336],[52.891415,36.041786],[52.891188,36.04204]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_109 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890574,36.041334],[52.890781,36.041092],[52.890985,36.041570],[52.890775,36.041809]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_110 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890777,36.041817],[52.890987,36.041578],[52.891184,36.042045],[52.890972,36.042282]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_111 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890367,36.041575],[52.890570,36.041338],[52.890771,36.041814],[52.890568,36.042046]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_112 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890571,36.042054],[52.890773,36.041821],[52.890968,36.042287],[52.890767,36.042512]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_113 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890163,36.041811],[52.890362,36.041579],[52.890564,36.042051],[52.890365,36.042278]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_114 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890368,36.042286],[52.890566,36.042058],[52.890762,36.042518],[52.890565,36.042739]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_115 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889958,36.042050],[52.890158,36.041816],[52.890360,36.042283],[52.890156,36.042516]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_116 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890158,36.042524],[52.890363,36.042289],[52.890560,36.042744],[52.890352,36.042978]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_117 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889747,36.042294],[52.889953,36.042054],[52.890152,36.042521],[52.889936,36.042768]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_118 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889938,36.042775],[52.890154,36.042528],[52.890348,36.042983],[52.890124,36.043233]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_119 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889527,36.042550],[52.889743,36.042298],[52.889932,36.042772],[52.889721,36.043012]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_120 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889723,36.043020],[52.889934,36.042779],[52.890120,36.043238],[52.889914,36.043469]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_121 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889311,36.042799],[52.889523,36.042555],[52.889717,36.043017],[52.889504,36.043260]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_122 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889507,36.043265],[52.889719,36.043024],[52.889910,36.043473],[52.889694,36.043715]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_123 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887693,36.040126],[52.887955,36.039787],[52.888099,36.040136],[52.887829,36.040448]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_124 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887831,36.040453],[52.888101,36.040141],[52.888238,36.040469],[52.887963,36.040766]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_125 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.887965,36.040771],[52.888240,36.040475],[52.888377,36.040800],[52.888105,36.041102]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_126 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888107,36.041108],[52.888380,36.040807],[52.888519,36.041138],[52.888242,36.041427]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_127 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888244,36.041433],[52.888522,36.041144],[52.888651,36.041452],[52.888380,36.041755]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_128 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888382,36.041761],[52.888653,36.041457],[52.888787,36.041778],[52.888520,36.042087]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_129 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888522,36.042092],[52.888789,36.041784],[52.888927,36.042114],[52.888658,36.042413]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_130 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888660,36.042419],[52.888929,36.042120],[52.889071,36.042457],[52.888797,36.042741]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_131 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888799,36.042748],[52.889074,36.042463],[52.889204,36.042775],[52.888936,36.043074]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_132 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.888939,36.043079],[52.889206,36.042780],[52.889345,36.043111],[52.889074,36.043401]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_133 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889077,36.043407],[52.889348,36.043117],[52.889490,36.043457],[52.889217,36.043739]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_134 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.889220,36.043745],[52.889493,36.043464],[52.889630,36.043787],[52.889363,36.044088]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_135 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890603,36.039284],[52.891222,36.038417],[52.891308,36.038495],[52.891210,36.038603],[52.891502,36.038821],[52.890850,36.039749]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		var place_2_136 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates:[[[52.890853,36.039755],[52.891506,36.038825],[52.891897,36.039115],[52.891096,36.040220]]],fillRule: "nonZero"},}, {fillColor: clr_green,opacity: opct,strokeWidth: 0,});
+		
+		// Вызов объектов участков
+		myMap.geoObjects.add(place_2_grey_01); myMap.geoObjects.add(place_2_grey_02); // участки под коммерческое использование (серые)
+		//
+		myMap.geoObjects.add(place_2_01); myMap.geoObjects.add(place_2_02); myMap.geoObjects.add(place_2_03); myMap.geoObjects.add(place_2_04); myMap.geoObjects.add(place_2_05); myMap.geoObjects.add(place_2_06); myMap.geoObjects.add(place_2_07); myMap.geoObjects.add(place_2_08); myMap.geoObjects.add(place_2_09); myMap.geoObjects.add(place_2_10); myMap.geoObjects.add(place_2_11); myMap.geoObjects.add(place_2_12); myMap.geoObjects.add(place_2_13); myMap.geoObjects.add(place_2_14); myMap.geoObjects.add(place_2_15); myMap.geoObjects.add(place_2_16); myMap.geoObjects.add(place_2_17); myMap.geoObjects.add(place_2_18); myMap.geoObjects.add(place_2_19); myMap.geoObjects.add(place_2_20); myMap.geoObjects.add(place_2_21); myMap.geoObjects.add(place_2_22); myMap.geoObjects.add(place_2_23); myMap.geoObjects.add(place_2_24); myMap.geoObjects.add(place_2_25); myMap.geoObjects.add(place_2_26); myMap.geoObjects.add(place_2_27); myMap.geoObjects.add(place_2_28); myMap.geoObjects.add(place_2_29); myMap.geoObjects.add(place_2_30); myMap.geoObjects.add(place_2_31); myMap.geoObjects.add(place_2_32); myMap.geoObjects.add(place_2_33); myMap.geoObjects.add(place_2_34); myMap.geoObjects.add(place_2_35); myMap.geoObjects.add(place_2_36); myMap.geoObjects.add(place_2_37); myMap.geoObjects.add(place_2_38); myMap.geoObjects.add(place_2_39); myMap.geoObjects.add(place_2_40); myMap.geoObjects.add(place_2_41); myMap.geoObjects.add(place_2_42); myMap.geoObjects.add(place_2_43); myMap.geoObjects.add(place_2_44); myMap.geoObjects.add(place_2_45); myMap.geoObjects.add(place_2_46); myMap.geoObjects.add(place_2_47); myMap.geoObjects.add(place_2_48); myMap.geoObjects.add(place_2_49); myMap.geoObjects.add(place_2_50); myMap.geoObjects.add(place_2_51); myMap.geoObjects.add(place_2_52); myMap.geoObjects.add(place_2_53); myMap.geoObjects.add(place_2_54); myMap.geoObjects.add(place_2_55); myMap.geoObjects.add(place_2_56); myMap.geoObjects.add(place_2_57); myMap.geoObjects.add(place_2_58); myMap.geoObjects.add(place_2_59); myMap.geoObjects.add(place_2_60); myMap.geoObjects.add(place_2_61); myMap.geoObjects.add(place_2_62); myMap.geoObjects.add(place_2_63); myMap.geoObjects.add(place_2_64); myMap.geoObjects.add(place_2_65); myMap.geoObjects.add(place_2_66); myMap.geoObjects.add(place_2_67); myMap.geoObjects.add(place_2_68); myMap.geoObjects.add(place_2_69); myMap.geoObjects.add(place_2_70); myMap.geoObjects.add(place_2_71); myMap.geoObjects.add(place_2_72); myMap.geoObjects.add(place_2_73); myMap.geoObjects.add(place_2_74); myMap.geoObjects.add(place_2_75); myMap.geoObjects.add(place_2_76); myMap.geoObjects.add(place_2_77); myMap.geoObjects.add(place_2_78); myMap.geoObjects.add(place_2_79); myMap.geoObjects.add(place_2_80); myMap.geoObjects.add(place_2_81); myMap.geoObjects.add(place_2_82); myMap.geoObjects.add(place_2_83); myMap.geoObjects.add(place_2_84); myMap.geoObjects.add(place_2_85); myMap.geoObjects.add(place_2_86); myMap.geoObjects.add(place_2_87); myMap.geoObjects.add(place_2_88); myMap.geoObjects.add(place_2_89); myMap.geoObjects.add(place_2_90); myMap.geoObjects.add(place_2_91); myMap.geoObjects.add(place_2_92); myMap.geoObjects.add(place_2_93); myMap.geoObjects.add(place_2_94); myMap.geoObjects.add(place_2_95); myMap.geoObjects.add(place_2_96); myMap.geoObjects.add(place_2_97); myMap.geoObjects.add(place_2_98); myMap.geoObjects.add(place_2_99); myMap.geoObjects.add(place_2_100); myMap.geoObjects.add(place_2_101); myMap.geoObjects.add(place_2_102); myMap.geoObjects.add(place_2_103); myMap.geoObjects.add(place_2_104); myMap.geoObjects.add(place_2_105); myMap.geoObjects.add(place_2_106); myMap.geoObjects.add(place_2_107); myMap.geoObjects.add(place_2_108); myMap.geoObjects.add(place_2_109); myMap.geoObjects.add(place_2_110); myMap.geoObjects.add(place_2_111); myMap.geoObjects.add(place_2_112); myMap.geoObjects.add(place_2_113); myMap.geoObjects.add(place_2_114); myMap.geoObjects.add(place_2_115); myMap.geoObjects.add(place_2_116); myMap.geoObjects.add(place_2_117); myMap.geoObjects.add(place_2_118); myMap.geoObjects.add(place_2_119); myMap.geoObjects.add(place_2_120); myMap.geoObjects.add(place_2_121); myMap.geoObjects.add(place_2_122); myMap.geoObjects.add(place_2_123); myMap.geoObjects.add(place_2_124); myMap.geoObjects.add(place_2_125); myMap.geoObjects.add(place_2_126); myMap.geoObjects.add(place_2_127); myMap.geoObjects.add(place_2_128); myMap.geoObjects.add(place_2_129); myMap.geoObjects.add(place_2_130); myMap.geoObjects.add(place_2_131); myMap.geoObjects.add(place_2_132); myMap.geoObjects.add(place_2_133); myMap.geoObjects.add(place_2_134); myMap.geoObjects.add(place_2_135); myMap.geoObjects.add(place_2_136);
+		
+		// Направляющие (линейки)
+		var line_01 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.889329,36.037840],[52.887246,36.034621]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_02 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.889277,36.037936],[52.887194,36.034707]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_03 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.886078,36.036445],[52.887473,36.035136]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_04 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.886058,36.036595],[52.887532,36.035233]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_05 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.886526,36.036166],[52.889699,36.04373]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_06 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.886461,36.036220],[52.889647,36.043826]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_07 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.888083,36.036091],[52.886967,36.037228]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_08 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.888135,36.036166],[52.887025,36.037314]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_09 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.88868,36.036992],[52.887493,36.038398]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_10 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.888732,36.037078],[52.887525,36.038516]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_11 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.889615,36.037475],[52.887661,36.040028]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_12 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.889602,36.037646],[52.8877,36.040114]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_13 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.889628,36.037416],[52.891717,36.041418]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_14 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.889622,36.037588],[52.891672,36.041493]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_15 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.890095,36.038511],[52.888441,36.04057]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_16 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.890141,36.038596],[52.888486,36.040678]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_17 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.890627,36.039498],[52.888869,36.041611]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_18 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.890666,36.039594],[52.888901,36.041718]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_19 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.891153,36.040517],[52.889297,36.042663]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_20 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.891198,36.040603],[52.889343,36.042759]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_21 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.886742,36.03666],[52.887813,36.035654]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_22 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.887240,36.037872],[52.888416,36.036576]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_23 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.887749,36.039078],[52.889058,36.037415]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_24 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.889857,36.038045],[52.888146,36.040185]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_25 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.89038,36.039027],[52.888644,36.041205]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_26 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.89091,36.04005],[52.889033,36.042274]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		var line_27 = new ymaps.GeoObject({geometry: {type: "Polygon",coordinates: [[[52.891442,36.041053],[52.889499,36.043271]]],fillRule: "nonZero"},}, {strokeWidth: 1});
+		
+		// Вызов объектов направляющих
+		myMap.geoObjects.add(line_01); myMap.geoObjects.add(line_02); myMap.geoObjects.add(line_03); myMap.geoObjects.add(line_04); myMap.geoObjects.add(line_05); myMap.geoObjects.add(line_06); myMap.geoObjects.add(line_07); myMap.geoObjects.add(line_08); myMap.geoObjects.add(line_09); myMap.geoObjects.add(line_10); myMap.geoObjects.add(line_11); myMap.geoObjects.add(line_12); myMap.geoObjects.add(line_13); myMap.geoObjects.add(line_14); myMap.geoObjects.add(line_15); myMap.geoObjects.add(line_16); myMap.geoObjects.add(line_17); myMap.geoObjects.add(line_18); myMap.geoObjects.add(line_19); myMap.geoObjects.add(line_20); /* myMap.geoObjects.add(line_21); myMap.geoObjects.add(line_22); myMap.geoObjects.add(line_23); myMap.geoObjects.add(line_24); myMap.geoObjects.add(line_25); myMap.geoObjects.add(line_26); myMap.geoObjects.add(line_27); */
+		
+		// Создаем многоугольник без вершин.
+		var myPolygon = new ymaps.Polygon([], {}, {
+			// Курсор в режиме добавления новых вершин.
+			editorDrawingCursor: "crosshair",
+			// Максимально допустимое количество вершин.
+			editorMaxPoints: 1000,
+			// Цвет заливки.
+			fillColor: '#00FF00',
+			// Цвет обводки.
+			strokeColor: '#0000FF',
+			// Ширина обводки.
+			strokeWidth: 2
+		});
+		// Добавляем многоугольник на карту.
+		myMap.geoObjects.add(myPolygon);
+		// Указываем тип карты (по умолчанию — схема)
+		//myMap.setType('yandex#hybrid');
+		
+		// В режиме добавления новых вершин меняем цвет обводки многоугольника.
+		var stateMonitor = new ymaps.Monitor(myPolygon.editor.state);
+		stateMonitor.add("drawing", function (newValue) {
+			myPolygon.options.set("strokeColor", newValue ? '#FF0000' : '#0000FF');
+		});
+		
+		// Включаем режим редактирования с возможностью добавления новых вершин.
+		myPolygon.editor.startDrawing();
+		
+		myPolygon.geometry.events.add('change', function () {
+			//document.getElementById('result').innerHTML = myPolygon.geometry.getCoordinates();
+			$('#result').html(JSON.stringify(patchCoord(myPolygon.geometry.getCoordinates())));
+		});
+	}
+	</script>
+</head>
+<body>
+	<div id="map" style="width:100%; height:850px;"></div>
+	<div class="" style="margin-top:40px;" >
+		<textarea id="result" style="margin:0px; display:block; height:70px; width:100%" ></textarea>
+	</div>
+</body>
+</html>
