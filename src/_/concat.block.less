@@ -1657,7 +1657,8 @@ textarea._fms__form-control{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -75%);
-	width: 600px;
+	max-width: 880px;
+	width: 100%;
 	height: 300px;
 	z-index: 2;
 	@media @media-size-sml{
@@ -1677,6 +1678,7 @@ textarea._fms__form-control{
 		height: 100%;
 		transform: translateX(-50%);
 		background: fadeout(@black, 50%);
+		max-width: 450px;
 	}
 }
 ._ipc__carousel-caption__inner{
