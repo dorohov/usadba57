@@ -91,3 +91,24 @@
 		}
 	}
 }
+.btn-close-sm{
+	@media @media-screen{
+		position: absolute;
+		right: 15px;
+		top: -30px;
+		&::before{
+			font-family: @icon;
+			content: @icon-close;
+			display: block;
+			color: @black;
+			font-size: 14px;
+			text-align: center;
+			transition: @transition-site;
+		}
+		&:hover{
+			&:before{
+				color: @blue-grey;
+			}
+		}
+	}
+}

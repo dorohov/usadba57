@@ -6,6 +6,7 @@ var h_window = $(window).height(),
 	w_news_preview = $('.news-item__preview').outerWidth(true),
 	h_news_block = $('.news-block').outerHeight(true),
 	h_footer = $('.footer-site').outerHeight(true),
+	h_package = $('._sppc__cols-content').outerHeight(true),
 	h_contacts = $('._ctpc__cols-left').outerHeight(true),
 	h_content_index = h_window - h_navbar,
 	h_content_scroller = h_window - h_header - h_footer, 
@@ -47,5 +48,6 @@ if (device.mobile() || device.tablet()) {
 	$('.content-block.second').css("height", h_content_scroller);
 	$('.content-block.second').css("top", h_header);
 	$('.content-block.resize').css("height", h_content_scroller);
+	$('._sppc__cols-tabs').css("height", h_package);
 }
 $(".navbar-fixed-top").autoHidingNavbar();
