@@ -18,7 +18,7 @@ $(function() {
 			hintContent: '«Орловские усадьбы»'
 		}, {
 			iconLayout: 'default#image',
-			iconImageHref: '/img/default/icon-map.png',
+			iconImageHref: '/wp-content/themes/azbnbasetheme/img/default/icon-map.png',
 			iconImageSize: [132, 138],
 			iconImageOffset: [-66, -138]
 		});
