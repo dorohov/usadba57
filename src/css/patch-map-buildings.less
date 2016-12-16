@@ -34,13 +34,16 @@
     background-size:contain;
     width:23px;
     height:22px;
-    opacity:1;
+    opacity:0;
     transition:opacity .3s ease;
     background-image:url(/wp-content/themes/azbnbasetheme/img/plan/icon-wood.png);
     background-image:url("@{url-path-img}/plan/icon-wood.png");
 }
 
 #map {
+	.azbn-house {
+		transform:scale(.5);
+	}
     .azbn-house[data-house="1"], .azbn-house[data-house="2"] {
         //transition:all .3s ease;
         transform-origin:center center;
@@ -81,6 +84,7 @@
     &[data-map-zoom="17"] {
         .azbn-house, .azbn-wood {
             transform:scale(1);
+			opacity:1;
         }
     }
     &[data-map-zoom="18"] {
@@ -89,6 +93,7 @@
         }
         .azbn-wood {
             transform:scale(2);
+			opacity:1;
         }
         @media @media-size-xs{
             .azbn-house, .azbn-wood {
@@ -100,6 +105,7 @@
     &[data-map-zoom="19"] {
         .azbn-house, .azbn-wood {
             transform:scale(4);
+			opacity:1;
         }
     }
     
