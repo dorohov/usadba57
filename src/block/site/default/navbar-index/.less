@@ -12,7 +12,7 @@
 		}
 		@media @media-size-sm{bottom: -370px;}
 		@media @media-screen{position: absolute;}
-		@media @media-size-mdl{bottom: -170px;}
+		@media @media-size-mdl{bottom: -140px;}
 		&.open{
 			bottom: 0;
 			._ni__carousel__hamburger{
@@ -21,7 +21,7 @@
 				}
 			}
 			._ni__carousel__hamburger-box{
-				border-bottom-color: fadeout(@black, 20%);
+				border-bottom-color: fadeout(@white, 20%);
 			}
 		}
 	}
@@ -33,9 +33,11 @@
 ._ni__carousel__block-inner{
 	padding: 25px 40px;
 	background: fadeout(@black, 50%);
+	background: fadeout(@white, 15%);
 	@media @media-size-xs{padding: 20px 20px 0;}
 	@media @media-size-sm{padding-bottom: 5px;}
-	@media @media-size-sml{background: fadeout(@black, 20%);}
+	@media @media-size-mdl{padding: 10px;}
+	//@media @media-size-sml{background: fadeout(@black, 20%);}
 }
 .navbar-second__hamburger{	
 	&._ni__carousel__hamburger{
@@ -48,21 +50,21 @@
 		&:before{
 			font-family: @icon;
 			content: @icon-arrow-up;
-			color: @white;
+			color: @black;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			transform-origin: center;
-			font-size: 26px; 
+			font-size: 16px; 
 			transition: @transition-site;
 		}
 	}
 }
 ._ni__carousel__hamburger-box{
 	display: block;
-	border-bottom: 40px solid fadeout(@black, 0%);
-	border-left: 60px solid fadeout(@black, 100%);
-	border-right: 60px solid fadeout(@black, 100%);
+	border-bottom: 25px solid fadeout(@white, 20%);
+	border-left: 40px solid fadeout(@black, 100%);
+	border-right: 40px solid fadeout(@black, 100%);
 	transition: @transition-site;
 }

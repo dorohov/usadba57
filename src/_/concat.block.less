@@ -116,6 +116,17 @@
 			padding-bottom: 15px;
 		}
 	}
+	._fs__phone-cols{
+		display: none;
+	}
+	&.about{		
+		._fs__phone-cols{
+			display: block;
+		}
+		._fs__contacts-cols{
+			text-align: center;
+		}
+	}
 }
 ._fs__row{
 	align-items: center;
@@ -915,7 +926,7 @@ textarea._fms__form-control{
 		}
 		@media @media-size-sm{bottom: -370px;}
 		@media @media-screen{position: absolute;}
-		@media @media-size-mdl{bottom: -170px;}
+		@media @media-size-mdl{bottom: -140px;}
 		&.open{
 			bottom: 0;
 			._ni__carousel__hamburger{
@@ -924,7 +935,7 @@ textarea._fms__form-control{
 				}
 			}
 			._ni__carousel__hamburger-box{
-				border-bottom-color: fadeout(@black, 20%);
+				border-bottom-color: fadeout(@white, 20%);
 			}
 		}
 	}
@@ -936,9 +947,11 @@ textarea._fms__form-control{
 ._ni__carousel__block-inner{
 	padding: 25px 40px;
 	background: fadeout(@black, 50%);
+	background: fadeout(@white, 15%);
 	@media @media-size-xs{padding: 20px 20px 0;}
 	@media @media-size-sm{padding-bottom: 5px;}
-	@media @media-size-sml{background: fadeout(@black, 20%);}
+	@media @media-size-mdl{padding: 10px;}
+	//@media @media-size-sml{background: fadeout(@black, 20%);}
 }
 .navbar-second__hamburger{	
 	&._ni__carousel__hamburger{
@@ -951,22 +964,22 @@ textarea._fms__form-control{
 		&:before{
 			font-family: @icon;
 			content: @icon-arrow-up;
-			color: @white;
+			color: @black;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 			transform-origin: center;
-			font-size: 26px; 
+			font-size: 16px; 
 			transition: @transition-site;
 		}
 	}
 }
 ._ni__carousel__hamburger-box{
 	display: block;
-	border-bottom: 40px solid fadeout(@black, 0%);
-	border-left: 60px solid fadeout(@black, 100%);
-	border-right: 60px solid fadeout(@black, 100%);
+	border-bottom: 25px solid fadeout(@white, 20%);
+	border-left: 40px solid fadeout(@black, 100%);
+	border-right: 40px solid fadeout(@black, 100%);
 	transition: @transition-site;
 }
 @top-val: 		98px;
@@ -1097,7 +1110,8 @@ textarea._fms__form-control{
 	}
 } 
 .panel-note{
-	background: fadeout(@black, 40%);
+	//background: fadeout(@black, 40%);
+	background: fadeout(@blue, 20%); 
 	padding: 20px 30px;
 	font-family: @proxima;
 	font-size: @b-fs + 4px; //20px
@@ -1681,7 +1695,8 @@ textarea._fms__form-control{
 		width: 75%;
 		height: 100%;
 		transform: translateX(-50%);
-		background: fadeout(@black, 50%);
+		//background: fadeout(@black, 50%);
+		background: fadeout(@blue, 20%); 
 		max-width: 450px;
 	}
 }
@@ -1776,17 +1791,28 @@ textarea._fms__form-control{
 ._ipc__carousel-indicators__row{
 	justify-content: center;
 	@media @media-device{flex-wrap: wrap}
+	@media @media-size-mdl{
+		margin-left: -5px;
+		margin-right: -5px;
+	}
 }
 ._ipc__carousel-indicators__cols{
 	width: calc(100% / 6);
 	@media @media-size-xs-p{width: 100%; margin-bottom: 20px;}
 	@media @media-size-xs-l{width: 50%; margin-bottom: 30px;}
 	@media @media-size-sm{width: 33.333%;}
+	@media @media-size-mdl{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
 	&.active{
 		._ipc__carousel-indicators__item{
-			border: 1px solid fadeout(@white, 0%);
+			border: 1px solid fadeout(@blue, 0%);
 			cursor: default;
-			opacity: 1;
+			//opacity: 1;
+			span{
+				background: fadeout(@blue, 20%); 
+			}
 			.__preview{transform: scale(1);}
 		}
 	}
@@ -1800,7 +1826,7 @@ textarea._fms__form-control{
 	transition: @transition-site;
 	cursor: pointer;
 	overflow: hidden;
-	@media @media-notsmart{opacity: 0.7;}
+	//@media @media-notsmart{opacity: 0.7;}
 	@media @media-size-xs{
 		height: 200px;
 	}
@@ -1826,7 +1852,8 @@ textarea._fms__form-control{
 		line-height: @b-lh;
 		position: absolute;
 		font-family: @din;
-		background: @white;
+		//background: @white;
+		background: fadeout(#8ebb43, 20%);
 		width: 100%;
 		position: absolute;
 		bottom: -1px;
@@ -1834,10 +1861,13 @@ textarea._fms__form-control{
 		left: 0;
 		text-align: center;
 		padding: 10px 20px;
-		color: @black;
+		//color: @black;
+		color: @white;
+		transition: @transition-site;
+		@media @media-size-mdl{font-size: @b-fs + 0px;}
 	}
 	&:hover{
-		opacity: 0.9;
+		//opacity: 0.9;
 		.__preview{
 			transform: scale(1); 
 		}
