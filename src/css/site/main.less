@@ -198,17 +198,26 @@ ul{
 		}
 	}
 }
-._czr__balloon{
-	border: 2px solid #a5d25b;
-    padding: 0;
-    border-radius: 2px;
-    .ymaps-2-1-47-balloon__tail:after {
+
+ymaps[class$="balloon-overlay"],
+.azbn-ymaps-balloon-mod{
+    ymaps[class$="balloon__layout"]{
+		border: 2px solid #a5d25b;
+   		padding: 0!important;
+    	border-radius: 2px;
+    }
+   	ymaps[class$="balloon__tail"]:after{
+    //.ymaps-2-1-47-balloon__tail:after {
    		background-color: #a5d25b;
    	}
-   	.ymaps-2-1-47-balloon__close-button {
+   	ymaps[class$="balloon__close-button"]{
+   	//.ymaps-2-1-47-balloon__close-button {
 		width: 20px;
 		height: 30px;
 		transition: 0.3s all;
+	} 
+   	ymaps[class$="balloon__content"]{
+		color: #2a2a2a !important;
 	}
 }
 /*
