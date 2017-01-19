@@ -165,7 +165,7 @@
 			cursor: default;
 			//opacity: 1;
 			span{
-				background: fadeout(@blue, 20%); 
+				background: fadeout(@blue, 20%)!important; 
 			}
 			.__preview{transform: scale(1);}
 		}
@@ -219,6 +219,24 @@
 		color: @white;
 		transition: @transition-site;
 		@media @media-size-mdl{font-size: @b-fs + 0px;}
+		._ipc__carousel-indicators__cols:nth-child(1) &{
+			background: fadeout(@color-river, 20%);
+		} 
+		._ipc__carousel-indicators__cols:nth-child(2) &{
+			background: fadeout(@color-kulikovka, 20%);
+		} 
+		._ipc__carousel-indicators__cols:nth-child(3) &{
+			background: fadeout(@color-obraztsovo, 20%);
+		} 
+		._ipc__carousel-indicators__cols:nth-child(4) &{
+			background: fadeout(@color-hope, 20%);
+		} 
+		._ipc__carousel-indicators__cols:nth-child(5) &{
+			background: fadeout(@color-sahanskiy, 20%);
+		} 
+		._ipc__carousel-indicators__cols:nth-child(6) &{
+			background: fadeout(@color-maslovo, 20%);
+		} 
 	}
 	&:hover{
 		//opacity: 0.9;

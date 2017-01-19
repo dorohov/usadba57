@@ -68,3 +68,67 @@
 		}
 	}
 }
+
+ymaps[class$="balloon-overlay"],
+.azbn-ymaps-balloon-mod{
+    ymaps[class$="balloon__layout"]{
+		//border: 2px solid #a5d25b;
+		border: none;
+   		padding: 0!important;
+    	border-radius: 2px;
+    }
+   	ymaps[class$="balloon__tail"]:after{
+    //.ymaps-2-1-47-balloon__tail:after {
+   		background-color: #a5d25b;
+   	}
+   	ymaps[class$="balloon__close-button"]{
+   	//.ymaps-2-1-47-balloon__close-button {
+		width: 20px;
+		height: 30px;
+		transition: 0.3s all;
+	} 
+   	ymaps[class$="balloon__content"]{
+		color: #2a2a2a !important;
+		padding: 0;
+		> ymaps{
+		    min-height: 80px;
+    		min-width: 245px;
+    		@media @media-size-xs{min-width: 200px;}
+		}
+		ymaps{
+			height: 100%;
+			position: relative;
+			display: block;
+		}
+	}
+	._ppc__ymaps{
+		position: relative;
+    	display: flex;
+    	width: 100%;
+    	height: 100%;
+    	align-items: center;
+    	text-align: center;
+	}
+	._ppc__area{
+		background: #a5d25b;
+		width: 40%;
+		color: @white;    
+		text-align: center;
+		position: relative;
+    	height: 100%;
+    	display: flex;
+   		align-items: center;
+    	justify-content: center;
+    	width: 75px;
+    	font-size: 20px;
+		font-family: @proxima-ebold;
+		font-family: @din-ebold;
+		padding: 10px;
+	}
+	._ppc__note{
+		width: ~"calc(100% - 75px)";
+		color: #25476d;
+		font-size: 20px;
+		font-family: @proxima;
+	}
+}
