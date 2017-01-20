@@ -2001,6 +2001,9 @@ textarea._fms__form-control{
 		font-family: @din-med;
 	}
 }
+@color-free: #4fc600;
+@color-bay: #c60000;
+@color-lock: #e3bd24;
 .plan-page-content{
 	width: 100%;
 	height: 100%;
@@ -2057,32 +2060,49 @@ textarea._fms__form-control{
 	}
 	&.free{
 		&::after{
-			background: #4fc600;
+			background: @color-free;
 		}
 	}
 	&.bay{
 		&::after{
-			background: #c60000;
+			background: @color-bay;
 		}
 	}
 	&.lock{
 		&::after{
-			background: #e3bd24;
+			background: @color-lock;
 		}
 	}
 }
-
+ymaps[class$="balloon-overlay"]{
+	*{
+		box-shadow: none!important;
+   		overflow: visible!important;
+   	}
+}
 ymaps[class$="balloon-overlay"],
 .azbn-ymaps-balloon-mod{
+    ymaps[class$="balloon__close"]{
+		margin-bottom: 0;
+		margin-left: 0;
+		position: absolute;
+		right: 30px;
+		top: 0;
+    }
     ymaps[class$="balloon__layout"]{
 		//border: 2px solid #a5d25b;
 		border: none;
    		padding: 0!important;
     	border-radius: 2px;
+		background: fadeout(@white, 100%);
     }
    	ymaps[class$="balloon__tail"]:after{
     //.ymaps-2-1-47-balloon__tail:after {
    		background-color: #a5d25b;
+   		display: none;
+		._ppc__ymaps.yellow &{background: @color-lock}
+		._ppc__ymaps.red &{background: @color-bay}
+		._ppc__ymaps.green &{background: @color-free} 
    	}
    	ymaps[class$="balloon__close-button"]{
    	//.ymaps-2-1-47-balloon__close-button {
@@ -2093,9 +2113,11 @@ ymaps[class$="balloon-overlay"],
    	ymaps[class$="balloon__content"]{
 		color: #2a2a2a !important;
 		padding: 0;
+		background: fadeout(@white, 100%);
 		> ymaps{
 		    min-height: 80px;
-    		min-width: 245px;
+    		min-width: 265px;
+    		//margin-bottom: 17px;
     		@media @media-size-xs{min-width: 200px;}
 		}
 		ymaps{
@@ -2111,6 +2133,30 @@ ymaps[class$="balloon-overlay"],
     	height: 100%;
     	align-items: center;
     	text-align: center;
+		background: @white;
+		padding-right: 20px;
+    	&.yellow {
+			._ppc__area{background: @color-lock;}
+			&:after{border-top-color:@color-lock;}
+    	} 
+		&.red{
+			._ppc__area{background: @color-bay;}
+			&:after{border-top-color:@color-bay;}
+    	}
+		&.green{
+			._ppc__area{background: @color-free;}
+			&:after{border-top-color:@color-free;}
+    	}
+		&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: -12px;
+			left: 45px;
+			border-top: 12px solid #a5d25b;
+			border-right: 12px solid fadeout(@white, 100%);
+			border-left: 12px solid fadeout(@white, 100%);
+		}
 	}
 	._ppc__area{
 		background: #a5d25b;
