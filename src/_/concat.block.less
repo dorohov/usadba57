@@ -931,10 +931,13 @@ textarea._fms__form-control{
 			._ni__carousel__hamburger{
 				&:before{
 					transform: translate(-50%, -50%) rotate(-180deg);
+					transition: @transition-site;
+					animation-name: none;
 				}
 			}
 			._ni__carousel__hamburger-box{
 				border-bottom-color: fadeout(@white, 20%);
+				animation-name: none;
 			}
 		}
 	}
@@ -955,7 +958,9 @@ textarea._fms__form-control{
 .navbar-second__hamburger{	
 	&._ni__carousel__hamburger{
 		@media @media-size-xs{display: none}
-		@media @media-size-mdl{display: block;}
+		@media @media-size-mdl{
+			display: block;
+		}
 		position: relative;
 		order: -1;
 		margin: 0 auto;
@@ -970,7 +975,14 @@ textarea._fms__form-control{
 			transform: translate(-50%, -50%);
 			transform-origin: center;
 			font-size: 16px; 
-			transition: @transition-site;
+			//transition: @transition-site;
+			@media @media-size-mdl{	
+				z-index: 5;			
+				animation-name: anim;
+				animation-duration: 1.5s;
+				animation-iteration-count: infinite;
+				transition: 0.8s all;
+			}
 		}
 	}
 }
@@ -980,6 +992,40 @@ textarea._fms__form-control{
 	border-left: 40px solid fadeout(@black, 100%);
 	border-right: 40px solid fadeout(@black, 100%);
 	transition: @transition-site;
+	@media @media-size-mdl{				
+		animation-name: anim1;
+		animation-duration: 1.5s;
+		animation-iteration-count: infinite;
+		transition: 0.8s all;
+	}
+}
+
+@keyframes anim1 {
+	from {
+		transform-origin: center;
+		transform: scale(1);
+	}
+	50%{
+		transform: scale(1.25);
+	}
+	to{
+		transform: scale(1);
+	}
+}
+@keyframes anim {
+	from {
+		//transform-origin: center;
+		//transform: scale(1);
+		font-size: 16px; 
+	}
+	50%{
+		//transform: scale(1.25);
+		font-size: 20px; 
+	}
+	to{
+		//transform: scale(1);
+		font-size: 16px; 
+	}
 }
 @top-val: 		98px;
 @top-val-xs: 	66px;
